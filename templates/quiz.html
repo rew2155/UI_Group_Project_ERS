@@ -1,0 +1,10 @@
+<html>
+    <head></head>
+    <body>
+        {% extends "layout.html" %} {% block content %}
+        <script type="text/javascript" src="{{url for ('static', filename = 'quiz.js') }}"> </script>
+        <script> let question = {{questions|json}} console.log(questions) </script>
+
+
+    </body>
+</html>
