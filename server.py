@@ -33,7 +33,7 @@ quiz_qs = {
     "3":{
         "id": 3,
         "prompt": "The following list provides the sequence of events in a game with 4 players:",
-        "situation": "1. Player 1 plays a 3 \n 2. Player 2 plays a King \n 3. Player 3 plays a 2 \n 4. Player 3 plays a King \n 5. Player 2 slaps the pile",
+        "situation": "1. Player 1 plays a 3 <br> 2. Player 2 plays a King <br> 3. Player 3 plays a 2 <br> 4. Player 3 plays a King <br> 5. Player 2 slaps the pile",
         "question": "What happens next?",
         "answer1": "Player 2 picks up the pile",
         "answer2": "Player 2 discards a penalty card",
@@ -46,7 +46,7 @@ quiz_qs = {
     "4":{
         "id": 4,
         "prompt": "The following list provides the sequence of events in a game with 3 players:",
-        "situation": "1. Player 1 plays a 4 \n 2. Player 2 plays a Jack \n 3. Player 3 plays a Queen \n 4. Player 1 plays a 2 \n 5. Player 1 plays a 3",
+        "situation": "1. Player 1 plays a 4 <br> 2. Player 2 plays a Jack <br> 3. Player 3 plays a Queen <br> 4. Player 1 plays a 2 <br> 5. Player 1 plays a 3",
         "question": "What happens next?",
         "answer1": "Player 1 picks up the pile",
         "answer2": "Player 2 picks up the pile",
@@ -59,7 +59,7 @@ quiz_qs = {
     "5":{
         "id": 5,
         "prompt": "The following list provides the sequence of events in a game with 2 players:",
-        "situation": "1. Player 1 plays an 8 \n 2. Player 2 plays a 3 \n 3. Player 1 plays an 8 \n 4. Player 2 plays a 7 \n 5. Player 1 slaps the pile",
+        "situation": "1. Player 1 plays an 8 <br> 2. Player 2 plays a 3 <br> 3. Player 1 plays an 8 <br> 4. Player 2 plays a 7 <br> 5. Player 1 slaps the pile",
         "question": "What happens next?",
         "answer1": "Player 1 picks up the pile",
         "answer2": "Player 1 discards a penalty card",

@@ -3,7 +3,7 @@
     <body>
         {% extends "layout.html" %} {% block content %}
         <script type="text/javascript" src="{{url for ('static', filename = 'quiz.js') }}"> </script>
-        <script> let question = {{questions|json}} console.log(questions) </script>
+        <script> let questions = {{quiz_qs|tojson}} console.log(questions) </script>
 
 
     </body>
