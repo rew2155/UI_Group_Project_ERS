@@ -7,7 +7,7 @@ quiz_qs = {
     "1":{
         "id": 1,
         "prompt": "The pile currently looks like this:",
-        "situation": "<img id='situation' source=''>" #add image file
+        "situation": "<img id='situation' source='https://live.staticflickr.com/4053/4616131778_4e21a66456_w.jpg'>" #add classes to format image
         "question": "How many extra turns does the following player get?",
         "answer1": "<button id='option1'> 1 </div>",
         "answer2": "<button id='option2'> 2 </div>",
@@ -111,12 +111,12 @@ quiz_qs = {
     "9":{
         "id": 9,
         "prompt": "It's your turn and the pile currently looks like this:",
-        "situation": "<img id='situation' source=''>" #add image file
+        "situation": "<img id='situation' source='https://photos.app.goo.gl/NsvNfDmdoTh6VskK8'>" #check if this link works and add formatting options
         "question": "Drag and drop the card that would provide the next player 1 extra turn.",
-        "answer1": "<img id='option1' source=''>" #add image file
-        "answer2": "<img id='option2' source=''>" #add image file
-        "answer3": "<img id='option3' source=''>" #add image file
-        "answer4": "<img id='option4' source=''>" #add image file
+        "answer1": "<img id='option1' source='https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.m.wikipedia.org%2Fwiki%2FFile%3AEnglish_pattern_jack_of_hearts.svg&psig=AOvVaw3f3NWx_1v2ad-ewWqizg8U&ust=1713358629566000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJj30LbkxoUDFQAAAAAdAAAAABAE'>" #add formatting options
+        "answer2": "<img id='option2' source='https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/51_Q_di_picche.jpg/800px-51_Q_di_picche.jpg'>" #add formatting options
+        "answer3": "<img id='option3' source='https://static.wikia.nocookie.net/aliceinborderland/images/1/16/King_of_Clubs.png/revision/latest?cb=20221106041043'>" #add formatting options
+        "answer4": "<img id='option4' source='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/01_of_spades_A.svg/1200px-01_of_spades_A.svg.png'>" #add formatting options
         "correct_answer": "answer1",
         "next_q": "10",
     },
@@ -124,12 +124,11 @@ quiz_qs = {
     "10":{
         "id": 10,
         "prompt": "It's your turn and the pile currently looks like this:",
-        "situation": "<img id='situation' source=''>" #add image file
+        "situation": "<img id='situation' source='https://photos.app.goo.gl/81rT9RTwFGeauvpi9'>" #check if this link works and add formatting options
         "question": "Drag and drop the card that would create the opportunity to slap a Sandwich.",
-        "answer1": "<img id='option1' source=''>" #add image file
-        "answer2": "<img id='option2' source=''>" #add image file
-        "answer3": "<img id='option3' source=''>" #add image file
-        "answer4": "<img id='option4' source=''>" #add image file
+        "answer1": "<img id='option1' source='https://static.wikia.nocookie.net/aliceinborderland/images/3/3f/Three_of_Clubs.png/revision/latest?cb=20221106040648'>" #add formatting options
+        "answer2": "<img id='option2' source='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/839f488c-d377-4eeb-999f-6bcace090bb4/d3kgfp4-4f84f045-9bd5-41b6-a725-49d6ffe02db7.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgzOWY0ODhjLWQzNzctNGVlYi05OTlmLTZiY2FjZTA5MGJiNFwvZDNrZ2ZwNC00Zjg0ZjA0NS05YmQ1LTQxYjYtYTcyNS00OWQ2ZmZlMDJkYjcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.G2m-VwK3lNCoL64myCu1MOGlgmqqrLARfmRXFL9YW_s'>" #add formatting options
+        "answer4": "<img id='option4' source='https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/51_Q_di_picche.jpg/800px-51_Q_di_picche.jpg'>" #add formatting options
         "correct_answer": "answer4",
         "next_q": "score",
     }
