@@ -1,10 +1,33 @@
-<html>
-    <head></head>
-    <body>
-        {% extends "layout.html" %} {% block content %}
-        <script type="text/javascript" src="{{url for ('static', filename = 'quiz.js') }}"> </script>
-        <script> let questions = {{quiz_qs|tojson}} console.log(questions) </script>
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+
+<script>
+    let question = {{question|tojson}};
+    console.log("question: ", question);
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {{question.prompt}} <br>
+            <br>
+            {{question.situation}} <br>
+            <br>
+            {{question.question}} <br>
+            <br>
+
+            <button id="option1">{{question.answer1}}</button>
+            <button id="option2">{{question.answer2}}</button>
+            <button id="option3">{{question.answer3}}</button>
+            <button id="option4">{{question.answer4}}</button>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
 
 
-    </body>
-</html>
+{% endblock %}
