@@ -143,6 +143,211 @@ quiz_qs = {
     }
     }
 
+lesson_ls = {
+    "1": {
+        "id": 1,
+        "Title": "What You Need",
+        "Subtitle": "Standard 52-card deck of playing cards 2-10 players",
+        "Picture": "",
+        "Category": "Setup & Gameplay",
+        "Status": "1 of 5",
+    },
+    "2":{
+        "id": 2,
+        "Title": "",
+        "Subtitle": "",
+        "Picture" : "",
+        "Category": "",
+        "Status": "",
+    },
+    "3":{
+        "id": 3,
+        "Title": "",
+        "Subtitle": "",
+        "Picture": "",
+        "Category": "",
+        "Status": "",
+    },
+    "4":{
+        "id": 4,
+        "Title": "",
+        "Subtitle": "",
+        "Picture" : "",
+        "Category": "",
+        "Status": "",
+    },
+    "5":{
+        "id": 5,
+        "Title": "",
+        "Subtitle": "",
+        "Picture" : "",
+        "Category": "",
+        "Status": "",
+    },
+    "6":{
+        "id": 6,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "7":{
+        "id": 7,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "8":{
+        "id": 8,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "9":{
+        "id": 9,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "10":{
+        "id": 10,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "11":{
+        "id": 11,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "12":{
+        "id": 12,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "13":{
+        "id": 13,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "14":{
+        "id": 14,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "15":{
+        "id": 15,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "16":{
+        "id": 16,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "17":{
+        "id": 17,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "18":{
+        "id": 18,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "19":{
+        "id": 19,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "20":{
+        "id": 20,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "21":{
+        "id": 21,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "22":{
+        "id": 22,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    },
+    "23":{
+        "id": 23,
+        "Title": "",
+        "Subtitle":"",
+        "Picture":"",
+        "Example":"",
+        "Category":"",
+        "Status":"",
+    }
+}
+
 # ROUTES
 
 @app.route('/')
@@ -153,19 +358,21 @@ def home():
 def quickstart():
     return render_template('quickstart.html')
 
-@app.route('/setup')
-def setup():
-    return render_template('learn.html')
-
 @app.route('/overview')
 def overview():
     return render_template('overview.html')
 
-@app.route('/quiz')
-def quiz_page():
-    return render_template('quiz.html')
-
 #TODO: @app.route for learning portion 
+
+@app.route('/setup/<int:lesson_id>')
+def setup(lesson_id):
+    """Serve a quiz question page."""
+    lesson_key = str(lesson_id)
+    if lesson_key in lesson_ls:
+        lesson = lesson_ls[lesson_key]
+        return render_template('learn.html', lesson=lesson)
+    else:
+        return "Lesson not found", 404
 
 @app.route('/quiz/<int:question_id>')
 def quiz(question_id):
