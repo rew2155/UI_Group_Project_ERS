@@ -149,6 +149,22 @@ quiz_qs = {
 def home():
     return render_template('homepage.html')
 
+@app.route('/quickstart')
+def quickstart():
+    return render_template('quickstart.html')
+
+@app.route('/setup')
+def setup():
+    return render_template('learn.html')
+
+@app.route('/overview')
+def overview():
+    return render_template('overview.html')
+
+@app.route('/quiz')
+def quiz_page():
+    return render_template('quiz.html')
+
 #TODO: @app.route for learning portion 
 
 @app.route('/quiz/<int:question_id>')
@@ -186,11 +202,9 @@ def submit_answer(question_id):
     
     return "Invalid request", 400
 
-
 @app.route('/result')
 def result():
     return render_template('results.html', correct_count=correct_counter[0], total_questions=total_questions)
 if __name__ == '__main__':
-
 
     app.run(debug=True)
