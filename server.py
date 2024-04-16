@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 
 app = Flask(__name__)
 total_questions = 10
-correct_answers = 0
+correct_counter = [0]
 
 quiz_qs = {
     "1": {
@@ -169,8 +169,13 @@ def submit_answer(question_id):
         user_answer = request.form.get('answer')
         correct_answer = quiz_qs[question_key]['correct_answer']
 
+        if type(user_answer) == str and type(correct_answer) == int:
+            user_answer = int(user_answer)
+        
         if user_answer == correct_answer:
-            correct_answer += 1
+            correct_counter[0] += 1
+        
+        print(correct_counter[0])
 
         next_question_id = quiz_qs[question_key]['next_q']
 
@@ -184,7 +189,7 @@ def submit_answer(question_id):
 
 @app.route('/result')
 def result():
-    return render_template('results.html', correct_count=correct_answers, total_questions=total_questions)
+    return render_template('results.html', correct_count=correct_counter[0], total_questions=total_questions)
 if __name__ == '__main__':
 
 
