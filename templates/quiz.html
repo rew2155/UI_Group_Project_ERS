@@ -1,33 +1,28 @@
-{% extends "layout.html" %}
-
-{% block content %}
-
-<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
-
-<script>
-    let question = {{question|tojson}};
-    console.log("question: ", question);
-</script>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            {{question.prompt}} <br>
-            <br>
-            {{question.situation}} <br>
-            <br>
-            {{question.question}} <br>
-            <br>
-
-            <button id="option1">{{question.answer1}}</button>
-            <button id="option2">{{question.answer2}}</button>
-            <button id="option3">{{question.answer3}}</button>
-            <button id="option4">{{question.answer4}}</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Question - {{ question['question'] }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ question['prompt'] }}</h1>
+    </header>
+    <main>
+        <div>
+            {{ question['situation'] | safe }}
         </div>
-        <div class="col-md-3"></div>
-    </div>
-</div>
-
-
-{% endblock %}
+        <h2>{{ question['question'] }}</h2>
+        <form action="{{ url_for('submit_answer', question_id=question['id']) }}" method="post">
+            {% for answer in question['answers'] %}
+            <div>
+                <input type="radio" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
+                <label for="answer{{ loop.index }}">{{ answer }}</label>
+            </div>
+            {% endfor %}
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
