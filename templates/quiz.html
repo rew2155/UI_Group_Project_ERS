@@ -1,12 +1,13 @@
-{% extends "layout.html" %}
-
-{% block content%}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
     <title>Quiz Question - {{ question['question'] }}</title>
 </head>
 <body>
@@ -18,17 +19,28 @@
             {{ question['situation'] | safe }}
         </div>
         <h2>{{ question['question'] }}</h2>
+        <!----
         <form action="{{ url_for('submit_answer', question_id=question['id']) }}" method="post">
             {% for answer in question['answers'] %}
-            <div>
-                <input type="radio" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
+            
+                <input type="button" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
                 <label for="answer{{ loop.index }}">{{ answer }}</label>
-            </div>
+            
             {% endfor %}
-            <button type="submit">Submit</button>
-        </form>
+        --->
+
+        {{question.answer1 | safe}}
+        {{question.answer2 | safe}}
+        {{question.answer3 | safe}}
+        {{question.answer4 | safe}}
+
+        <br>
+
+        <span id="result"></span>
+
+        <br>
+        <button id="prev">&lt;Prev</button>
+        <button id="next">Next&gt;</button>
     </main>
 </body>
 </html>
-
-{% endblock %}
