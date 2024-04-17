@@ -18,9 +18,12 @@
             {{ lesson['Subtitle'] }}
         </div>
         <div>
+            {{ lesson.Picture | safe }}
+        </div>
+        <div>
             {{ lesson['Category'] }}
         </div>
-        '<div>
+        <div>
             {{ lesson['Status'] }}
         </div>
 
