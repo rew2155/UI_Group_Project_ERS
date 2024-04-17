@@ -14,38 +14,42 @@
     <title>Quiz Question - {{ question['question'] }}</title>
 </head>
 <body>
-    <header>
-        <h1>{{ question['prompt'] }}</h1>
-    </header>
-    <main>
-        <div>
-            {{ question['situation'] | safe }}
+    <div class="container">
+        <div class="row"></div>
+            <h1 class="centered">{{ question['prompt'] }}</h1>
+        
+            <div class="centered">
+                {{ question['situation'] | safe }}
+            </div>
+            <h2 class="centered">{{ question['question'] }}</h2>
+
+            <!----
+            <form action="{{ url_for('submit_answer', question_id=question['id']) }}" method="post">
+                {% for answer in question['answers'] %}
+                
+                    <input type="button" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
+                    <label for="answer{{ loop.index }}">{{ answer }}</label>
+                
+                {% endfor %}
+            ---->
+            <div class="centered">
+
+                {{question.answer1 | safe}}
+                {{question.answer2 | safe}}
+                {{question.answer3 | safe}}
+                {{question.answer4 | safe}}
+
+            </div>
+
+            <br>
+
+            <span id="result"></span>
+
+            <br>
+            <button id="prev">&lt;Prev</button>
+            <button id="next" class="right-aligned">Next&gt;</button>
         </div>
-        <h2>{{ question['question'] }}</h2>
-
-        <!----
-        <form action="{{ url_for('submit_answer', question_id=question['id']) }}" method="post">
-            {% for answer in question['answers'] %}
-            
-                <input type="button" id="answer{{ loop.index }}" name="answer" value="{{ answer }}">
-                <label for="answer{{ loop.index }}">{{ answer }}</label>
-            
-            {% endfor %}
-        ---->
-
-        {{question.answer1 | safe}}
-        {{question.answer2 | safe}}
-        {{question.answer3 | safe}}
-        {{question.answer4 | safe}}
-
-        <br>
-
-        <span id="result"></span>
-
-        <br>
-        <button id="prev">&lt;Prev</button>
-        <button id="next">Next&gt;</button>
-    </main>
+    </div>
 </body>
 </html>
 {% endblock %}
