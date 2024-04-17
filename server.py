@@ -16,7 +16,8 @@ quiz_qs = {
         "answer4": "<button id='answer4'>4</button>",
         "correct_answer": "answer4",
         "prev_q": None,
-        "next_q": "2"
+        "next_q": "2",
+        "user_answer": None,
     },
 
     "2":{
@@ -31,6 +32,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "1",
         "next_q": "3",
+        "user_answer": None,
     },
 
     "3": {
@@ -49,6 +51,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "2",
         "next_q": "4",
+        "user_answer": None,
         },
 
     "4": {
@@ -63,6 +66,7 @@ quiz_qs = {
         "correct_answer": "answer3",
         "prev_q": "3",
         "next_q": "5",
+        "user_answer": None,
     },
 
     "5": {
@@ -77,6 +81,7 @@ quiz_qs = {
         "correct_answer": "answer2",
         "prev_q": "4",
         "next_q": "6",
+        "user_answer": None,
     },
 
     "6": {
@@ -91,6 +96,7 @@ quiz_qs = {
         "correct_answer": "answer2",
         "prev_q": "5",
         "next_q": "7",
+        "user_answer": None,
     },
 
     "7": {
@@ -105,7 +111,9 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "6",
         "next_q": "8",
+        "user_answer": None,
     },
+
     "8": {
         "id": 8,
         "prompt": "It's your turn and the pile currently looks like this:",
@@ -118,7 +126,9 @@ quiz_qs = {
         "correct_answer": "answer3",
         "prev_q": "7",
         "next_q": "9",
+        "user_answer": None,
     },
+
     "9": {
         "id": 9,
         "prompt": "It's your turn and the pile currently looks like this:",
@@ -131,7 +141,9 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "8",
         "next_q": "10",
+        "user_answer": None,
     },
+    
     "10": {
         "id": 10,
         "prompt": "It's your turn and the pile currently looks like this:",
@@ -144,8 +156,10 @@ quiz_qs = {
         "correct_answer": "answer4",
         "prev_q": "9",
         "next_q": "score",
+        "user_answer": None,
     }
-    }
+}
+
 
 lesson_ls = {
     "1": {
@@ -155,6 +169,7 @@ lesson_ls = {
         "Picture": "<img src='https://lh3.googleusercontent.com/pw/AP1GczMisWr5rKr0--1xvH5ilMZyJicP2B93PXoVDXF-UwtiZUhm3-5AyMw9SR3OVNGTGmklR-x__PhhSHT3jc5bdHdiuqRcuSvVMEX6RqNQzR5W4CW4pmc=w406-h195-p-k'>",
         "Category": "Setup & Gameplay",
         "Status": "1 of 5",
+        "Time": None,
     },
     "2":{
         "id": 2,
@@ -246,7 +261,7 @@ lesson_ls = {
         "id": 12,
         "Title": "Slapping Rules: Penalty",
         "Subtitle":"If any player falsely slaps, they must discard the top card from their deck and place it at the bottom of the pile, face up.",
-        "Picture":"<img src=''>",
+        "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczPT-m-gMmccv-5MaP8huDMQhOkWTEcDaIwZIY88xDKxya6R1kKwBvgnOf37vwRYaZq1b00VRd4s71_OnPcfX4FSrjk9DwcAuyedlvUJyIQApk4pPD8=w2400'>",
         "Example":"Ex. a player slaps the pile with an 8 and a 3 at the top",
         "Category":"Rules",
         "Status":"7 of 18",
@@ -264,7 +279,7 @@ lesson_ls = {
         "id": 14,
         "Title": "Face Cards and Aces",
         "Subtitle":"Face cards and aces provide players new opportunities to claim cards!",
-        "Picture":"<img src=''>",
+        "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczMRM9VAw5GUZa9jtyIpeTDSOYdHBJLFLNOMlvuLuAmChwriKzyvwjCI6Ei5VpVci1FGD9Qm3oxFECsYrdpHIurMEbKDBZcnqNAhlywM6d7RK12E70k=w2400'>",
         "Example":"",
         "Category":"Rules",
         "Status":"9 of 18",
@@ -398,6 +413,7 @@ def submit_answer(question_id):
     if question_key in quiz_qs:
         user_answer = request.form.get('answer')
         correct_answer = quiz_qs[question_key]['correct_answer']
+        quiz_qs['user_answer'] = user_answer
 
         # Check if the user's answer matches the correct answer
         is_correct = (user_answer == correct_answer)
