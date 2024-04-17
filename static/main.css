@@ -5,3 +5,11 @@
 .situation_img {
     max-width: 400px;
 }
+
+.centered {
+    text-align: center;
+}
+
+.right-aligned {
+    float: right;
+}

@@ -18,4 +18,15 @@ $('#next').click(function() {
         window.location.href = '/setup/' + nextLessonID;
     } 
 });
+
+$('#no').click(function() {
+    let prevLessonID = 5;
+    if (prevLessonID > 0) {
+        window.location.href = '/setup/' + prevLessonID;
+    } else {
+        window.location.href = window.location.href.split('/setup/')[0];
+    }
+});
+
+
 });
