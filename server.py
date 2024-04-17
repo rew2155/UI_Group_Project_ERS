@@ -370,18 +370,18 @@ def overview():
 
 @app.route('/setup/<int:lesson_id>')
 def setup(lesson_id):
-    """Serve a quiz question page."""
+    """Serve a lesson page or redirect based on lesson_id."""
     if lesson_id < 6:
          lesson_key = str(lesson_id)
     else:
         return render_template('overview.html')
 
-   
     if lesson_key in lesson_ls:
         lesson = lesson_ls[lesson_key]
         return render_template('learn.html', lesson=lesson)
     else:
         return "Lesson not found", 404
+    
 
 @app.route('/quiz/<int:question_id>')
 def quiz(question_id):
