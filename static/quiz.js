@@ -114,7 +114,7 @@ $(document).ready(function(){
         if (prevQuestionID > 0) {
             window.location.href = '/quiz/' + prevQuestionID;
         } else {
-            window.location.href = window.location.href.split('/quiz/')[0];
+            window.location.href = window.location.href.split('/quiz/')[0] + '/quickstart';
         }
     });
 
