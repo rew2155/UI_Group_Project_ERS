@@ -178,6 +178,7 @@ lesson_ls = {
         "Picture" : "<img src='https://lh3.googleusercontent.com/pw/AP1GczMLtTeM6rCr32POizTQWawXzuVt9KJFPlDytetQkn1snSaMI5p43FKSyCH6mXNLB7adnIP7A81H1H5PJ5lQOmY2fKBJl4IkElh5zFQ8fUNXonrIFbc=w2400'>",
         "Category": "Setup & Gameplay",
         "Status": "2 of 5",
+        "Time": None,
     },
     "3":{
         "id": 3,
@@ -186,6 +187,7 @@ lesson_ls = {
         "Picture": "<img src= 'https://lh3.googleusercontent.com/pw/AP1GczP-HY87abIoKjF-F8YAy505RhF1GxnJ6oLJoxlYxTZ7AZtH21vAkac7dO5VN-L6GcDRE4uAbir6PmEjup54Y_kKSL7axGJx0iRlwH2XxgqQDcTtwqw=w2400'>",
         "Category": "Setup & Gameplay",
         "Status": "3 of 5",
+        "Time": None,
     },
     "4":{
         "id": 4,
@@ -194,6 +196,7 @@ lesson_ls = {
         "Picture" : "<img src='https://lh3.googleusercontent.com/pw/AP1GczPXzAm9oGflZu4_bEfnkTfuQqf64i-rFghXkQSdo3cO8YHwaSme0EsLj-Kw_7izV6-rQWkQ1fmsW22P4b0CAyTSCk4bNzWBIZycg71PXHQGlJrrOK4=s251-p-k'>",
         "Category": "Setup & Gameplay",
         "Status": "4 of 5",
+        "Time": None,
     },
     "5":{
         "id": 5,
@@ -202,6 +205,7 @@ lesson_ls = {
         "Picture" : "<img src= 'https://lh3.googleusercontent.com/pw/AP1GczOr_R9CM201_5gO1nSMM5zz0KR6MMg5XYMYOlzt8bHZoA5J9ILsxSRrzK2OdTM75xIJUAxebGtHDqYJk3kivj_pImwMvay3Y4t6-CgiIG3habwm0pQ=w2400'>",
         "Category": "Setup & Gameplay",
         "Status": "5 of 5",
+        "Time": None,
     },
     "6":{
         "id": 6,
@@ -211,6 +215,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"1 of 18",
+        "Time": None,
     },
     "7":{
         "id": 7,
@@ -220,6 +225,7 @@ lesson_ls = {
         "Example":"Ex. one player plays a 6 and the next player also plays a 6",
         "Category":"Rules",
         "Status":"2 of 18",
+        "Time": None,
     },
     "8":{
         "id": 8,
@@ -229,6 +235,7 @@ lesson_ls = {
         "Example":"Ex. one player plays a 7, the next player plays a 4, and the following player plays a 7",
         "Category":"Rules",
         "Status":"3 of 18",
+        "Time": None,
     },
     "9":{
         "id": 9,
@@ -238,6 +245,7 @@ lesson_ls = {
         "Example":"Ex. one player plays a Queen and the next player plays a King",
         "Category":"Rules",
         "Status":"4 of 18",
+        "Time": None,
     },
     "10":{
         "id": 10,
@@ -247,6 +255,7 @@ lesson_ls = {
         "Example":"Ex. one player plays a 3 and the next player plays a 7",
         "Category":"Rules",
         "Status":"5 of 18",
+        "Time": None,
     },
     "11":{
         "id": 11,
@@ -256,6 +265,7 @@ lesson_ls = {
         "Example":"Ex. there is a double 7 in the pile, but the following player plays a 2 before anybody can slap",
         "Category":"Rules",
         "Status":"6 of 18",
+        "Time": None,
     },
     "12":{
         "id": 12,
@@ -265,6 +275,7 @@ lesson_ls = {
         "Example":"Ex. a player slaps the pile with an 8 and a 3 at the top",
         "Category":"Rules",
         "Status":"7 of 18",
+        "Time": None,
     },
     "13":{
         "id": 13,
@@ -274,6 +285,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"8 of 18",
+        "Time": None,
     },
     "14":{
         "id": 14,
@@ -283,6 +295,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"9 of 18",
+        "Time": None,
     },
     "15":{
         "id": 15,
@@ -292,6 +305,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"10 of 18",
+        "Time": None,
     },
     "16":{
         "id": 16,
@@ -301,6 +315,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"11 of 18",
+        "Time": None,
     },
     "17":{
         "id": 17,
@@ -310,6 +325,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"12 of 18",
+        "Time": None,
     },
     "18":{
         "id": 18,
@@ -319,6 +335,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"13 of 18",
+        "Time": None,
     },
     "19":{
         "id": 19,
@@ -328,6 +345,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"14 of 18",
+        "Time": None,
     },
     "20":{
         "id": 20,
@@ -337,6 +355,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"15 of 18",
+        "Time": None,
     },
     "21":{
         "id": 21,
@@ -345,6 +364,7 @@ lesson_ls = {
         "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczP0qxn6PRrcaMeKoPJV9zoBy5nPkvMv5Kt4LqY6by33-W_Jl8tsV43AJ9r6jjX-9wMYIksITRG0dzEWHU6BRiJqMKGMWow715AP4rxt5QJTEs0xccE=w2400'>",
         "Category":"Rules",
         "Status":"16 of 18",
+        "Time": None,
     },
     "22":{
         "id": 22,
@@ -353,6 +373,7 @@ lesson_ls = {
         "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczPU6MhZhT_FxmM_A-DYf5r9C5utBM05CWSK0s7vCss11D7NtfmXcS8fbw2L0zWE7Ux488VigD0EEnQSOcWqymZB281WIZktkC97fTpZiZZL3KjaPq0=w2400'>",
         "Category":"Rules",
         "Status":"17 of 18",
+        "Time": None,
     },
     "23":{
         "id": 23,
@@ -362,6 +383,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"18 of 18",
+        "Time": None,
     }
 }
 

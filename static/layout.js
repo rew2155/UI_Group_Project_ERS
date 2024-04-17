@@ -16,7 +16,9 @@ $('#next').click(function() {
     let nextLessonID = lesson_id + 1;
     if (nextLessonID <= 23) { 
         window.location.href = '/setup/' + nextLessonID;
-    } 
+    } else if(lesson_id = 23) {
+        window.location.href = '/quickstart';
+    }
 });
 
 $('#no').click(function() {
