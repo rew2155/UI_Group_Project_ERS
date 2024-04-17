@@ -364,9 +364,8 @@ def quickstart():
 
 @app.route('/overview')
 def overview():
-    return render_template('overview.html')
 
-#TODO: @app.route for learning portion 
+    return render_template('overview.html')
 
 @app.route('/setup/<int:lesson_id>')
 def setup(lesson_id):
@@ -382,7 +381,6 @@ def setup(lesson_id):
     else:
         return "Lesson not found", 404
     
-
 @app.route('/quiz/<int:question_id>')
 def quiz(question_id):
     """Serve a quiz question page."""
