@@ -16,7 +16,8 @@ quiz_qs = {
         "answer4": "<button id='answer4'>4</button>",
         "correct_answer": "answer4",
         "prev_q": None,
-        "next_q": "2"
+        "next_q": "2",
+        "user_answer": None,
     },
 
     "2":{
@@ -31,6 +32,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "1",
         "next_q": "3",
+        "user_answer": None,
     },
 
     "3": {
@@ -49,6 +51,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "2",
         "next_q": "4",
+        "user_answer": None,
         },
 
     "4": {
@@ -63,6 +66,7 @@ quiz_qs = {
         "correct_answer": "answer3",
         "prev_q": "3",
         "next_q": "5",
+        "user_answer": None,
     },
 
     "5": {
@@ -77,6 +81,7 @@ quiz_qs = {
         "correct_answer": "answer2",
         "prev_q": "4",
         "next_q": "6",
+        "user_answer": None,
     },
 
     "6": {
@@ -91,6 +96,7 @@ quiz_qs = {
         "correct_answer": "answer2",
         "prev_q": "5",
         "next_q": "7",
+        "user_answer": None,
     },
 
     "7": {
@@ -105,7 +111,9 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "6",
         "next_q": "8",
+        "user_answer": None,
     },
+
     "8": {
         "id": 8,
         "prompt": "It's your turn and the pile currently looks like this:",
@@ -118,7 +126,9 @@ quiz_qs = {
         "correct_answer": "answer3",
         "prev_q": "7",
         "next_q": "9",
+        "user_answer": None,
     },
+
     "9": {
         "id": 9,
         "prompt": "It's your turn and the pile currently looks like this:",
@@ -131,7 +141,9 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "8",
         "next_q": "10",
+        "user_answer": None,
     },
+    
     "10": {
         "id": 10,
         "prompt": "It's your turn and the pile currently looks like this:",
@@ -144,8 +156,10 @@ quiz_qs = {
         "correct_answer": "answer4",
         "prev_q": "9",
         "next_q": "score",
+        "user_answer": None,
     }
-    }
+}
+
 
 lesson_ls = {
     "1": {
@@ -155,6 +169,7 @@ lesson_ls = {
         "Picture": "<img src='https://lh3.googleusercontent.com/pw/AP1GczMisWr5rKr0--1xvH5ilMZyJicP2B93PXoVDXF-UwtiZUhm3-5AyMw9SR3OVNGTGmklR-x__PhhSHT3jc5bdHdiuqRcuSvVMEX6RqNQzR5W4CW4pmc=w406-h195-p-k'>",
         "Category": "Setup & Gameplay",
         "Status": "1 of 5",
+        "Time": None,
     },
     "2":{
         "id": 2,
@@ -163,6 +178,7 @@ lesson_ls = {
         "Picture" : "<img src='https://lh3.googleusercontent.com/pw/AP1GczMLtTeM6rCr32POizTQWawXzuVt9KJFPlDytetQkn1snSaMI5p43FKSyCH6mXNLB7adnIP7A81H1H5PJ5lQOmY2fKBJl4IkElh5zFQ8fUNXonrIFbc=w2400'>",
         "Category": "Setup & Gameplay",
         "Status": "2 of 5",
+        "Time": None,
     },
     "3":{
         "id": 3,
@@ -171,6 +187,7 @@ lesson_ls = {
         "Picture": "<img src= 'https://lh3.googleusercontent.com/pw/AP1GczP-HY87abIoKjF-F8YAy505RhF1GxnJ6oLJoxlYxTZ7AZtH21vAkac7dO5VN-L6GcDRE4uAbir6PmEjup54Y_kKSL7axGJx0iRlwH2XxgqQDcTtwqw=w2400'>",
         "Category": "Setup & Gameplay",
         "Status": "3 of 5",
+        "Time": None,
     },
     "4":{
         "id": 4,
@@ -179,6 +196,7 @@ lesson_ls = {
         "Picture" : "<img src='https://lh3.googleusercontent.com/pw/AP1GczPXzAm9oGflZu4_bEfnkTfuQqf64i-rFghXkQSdo3cO8YHwaSme0EsLj-Kw_7izV6-rQWkQ1fmsW22P4b0CAyTSCk4bNzWBIZycg71PXHQGlJrrOK4=s251-p-k'>",
         "Category": "Setup & Gameplay",
         "Status": "4 of 5",
+        "Time": None,
     },
     "5":{
         "id": 5,
@@ -187,6 +205,7 @@ lesson_ls = {
         "Picture" : "<img src= 'https://lh3.googleusercontent.com/pw/AP1GczOr_R9CM201_5gO1nSMM5zz0KR6MMg5XYMYOlzt8bHZoA5J9ILsxSRrzK2OdTM75xIJUAxebGtHDqYJk3kivj_pImwMvay3Y4t6-CgiIG3habwm0pQ=w2400'>",
         "Category": "Setup & Gameplay",
         "Status": "5 of 5",
+        "Time": None,
     },
     "6":{
         "id": 6,
@@ -196,6 +215,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"1 of 18",
+        "Time": None,
     },
     "7":{
         "id": 7,
@@ -205,6 +225,7 @@ lesson_ls = {
         "Example":"Ex. one player plays a 6 and the next player also plays a 6",
         "Category":"Rules",
         "Status":"2 of 18",
+        "Time": None,
     },
     "8":{
         "id": 8,
@@ -214,6 +235,7 @@ lesson_ls = {
         "Example":"Ex. one player plays a 7, the next player plays a 4, and the following player plays a 7",
         "Category":"Rules",
         "Status":"3 of 18",
+        "Time": None,
     },
     "9":{
         "id": 9,
@@ -223,6 +245,7 @@ lesson_ls = {
         "Example":"Ex. one player plays a Queen and the next player plays a King",
         "Category":"Rules",
         "Status":"4 of 18",
+        "Time": None,
     },
     "10":{
         "id": 10,
@@ -232,6 +255,7 @@ lesson_ls = {
         "Example":"Ex. one player plays a 3 and the next player plays a 7",
         "Category":"Rules",
         "Status":"5 of 18",
+        "Time": None,
     },
     "11":{
         "id": 11,
@@ -241,15 +265,17 @@ lesson_ls = {
         "Example":"Ex. there is a double 7 in the pile, but the following player plays a 2 before anybody can slap",
         "Category":"Rules",
         "Status":"6 of 18",
+        "Time": None,
     },
     "12":{
         "id": 12,
         "Title": "Slapping Rules: Penalty",
         "Subtitle":"If any player falsely slaps, they must discard the top card from their deck and place it at the bottom of the pile, face up.",
-        "Picture":"<img src=''>",
+        "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczPT-m-gMmccv-5MaP8huDMQhOkWTEcDaIwZIY88xDKxya6R1kKwBvgnOf37vwRYaZq1b00VRd4s71_OnPcfX4FSrjk9DwcAuyedlvUJyIQApk4pPD8=w2400'>",
         "Example":"Ex. a player slaps the pile with an 8 and a 3 at the top",
         "Category":"Rules",
         "Status":"7 of 18",
+        "Time": None,
     },
     "13":{
         "id": 13,
@@ -258,70 +284,78 @@ lesson_ls = {
         "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczNjEhRKXICb0Da1LSgWZ0EVELxG6Dc_vMUKF4xykFoDp3gEll1pstwzHkRHvxKH9f0gij7Mw5o3uFeIX9zANLV3qiNn446WzzF_F9-UZ6V4pINE7bY=w2400'>",
         "Example":"",
         "Category":"Rules",
-        "Status":"8 0f 18",
+        "Status":"8 of 18",
+        "Time": None,
     },
     "14":{
         "id": 14,
         "Title": "Face Cards and Aces",
         "Subtitle":"Face cards and aces provide players new opportunities to claim cards!",
-        "Picture":"<img src=''>",
+        "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczMRM9VAw5GUZa9jtyIpeTDSOYdHBJLFLNOMlvuLuAmChwriKzyvwjCI6Ei5VpVci1FGD9Qm3oxFECsYrdpHIurMEbKDBZcnqNAhlywM6d7RK12E70k=w2400'>",
         "Example":"",
         "Category":"Rules",
         "Status":"9 of 18",
+        "Time": None,
     },
     "15":{
         "id": 15,
         "Title": "Face Cards and Aces: Extra Turns",
         "Subtitle":"When face cards and aces are played, each one implies a different number of turns the next player gets to try to play another face card or ace.",
-        "Picture":"<img src=''>",
+        "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczN5zgQHg9RSBTmTri73wsAap4htUSLySolMTGOD-FbbfcOHvPWankhf0Dz5813bpEtYmmBuLBzOovm52tamIRpNxLZHo8q43rR8-CfPJrAH6Pfa79w=w2400'>",
         "Example":"",
         "Category":"Rules",
         "Status":"10 of 18",
+        "Time": None,
     },
     "16":{
         "id": 16,
         "Title": "Face Cards and Aces: Jacks",
         "Subtitle":"When a Jack is played, the next player gets 1 turn to play another face card or ace.",
-        "Picture":"<img src=''>",
+        "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczNzrgAtgOfU4_76REepFFjBTa6kHvIE4SVkYKqpqHqpN8ow51umafYxt-wc_FaZ3ruG87hD4el7ruZ8UyqQKAkynR55JhKaeU2m1_L2JgZzvc_2W64=w2400'>",
         "Example":"",
         "Category":"Rules",
         "Status":"11 of 18",
+        "Time": None,
     },
     "17":{
         "id": 17,
         "Title": "Face Cards and Aces: Queens",
         "Subtitle":"When a Queen is played, the next player gets 2 turns to play another face card or ace.",
-        "Picture":"<img src=''>",
+        "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczOmtyTF1nIXgPQM6Om7gYNc6ID6PqkGLTdIe8-4fUB0teEoUuSpUhfGqACUs6DZPdD4KZ5p6uB1H_1U0kf9zi8CcSDvmxCpgnWNM89wjisbH8MFBvk=w2400'>",
         "Example":"",
         "Category":"Rules",
         "Status":"12 of 18",
+        "Time": None,
     },
     "18":{
         "id": 18,
         "Title": "Face Cards and Aces: Kings",
         "Subtitle":"When a King is played, the next player gets 3 turns to play another face card or ace,",
-        "Picture":"<img src=''>",
+        "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczN5zgQHg9RSBTmTri73wsAap4htUSLySolMTGOD-FbbfcOHvPWankhf0Dz5813bpEtYmmBuLBzOovm52tamIRpNxLZHo8q43rR8-CfPJrAH6Pfa79w=w2400'>",
         "Example":"",
         "Category":"Rules",
         "Status":"13 of 18",
+        "Time": None,
     },
     "19":{
         "id": 19,
         "Title": "Face Cards and Aces: Aces",
         "Subtitle":"When an Ace is played, the next player gets 4 turns to play another face card or ace.",
-        "Picture":"<img src=''>",
+        "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczMvtaDgCQ_UWqBNq6zihUJhpRH7ZN-dRnWHSpWI516Ng_sVnGLSq9tTQZli2tDMc5YM6g-zz55ahSMRaLUDa_C2FCfpGDooio2xlXBpB-nL0ukf8tQ=w2400'>",
         "Example":"",
         "Category":"Rules",
         "Status":"14 of 18",
+        "Time": None,
     },
     "20":{
         "id": 20,
         "Title": "Face Cards and Aces: Turnout",
         "Subtitle":"When a player is unsuccessful at playing another face card or ace within their extra turns, the most recent person to play a face card or ace picks up the pile.",
-        "Picture":"<img src=''>",
+        "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczNme6ZmznUxQNnIPoB-ikChEMz5-A_2H22SmAf7_vyKQlPOp_u3Qdvf0K81mBs2odCtNNPAAmglsWumAmV2dIQATr8SYbA3rl90ONgG6SHff8ULxC0=w2400'>",
         "Example":"",
         "Category":"Rules",
         "Status":"15 of 18",
+        "Time": None,
     },
     "21":{
         "id": 21,
@@ -330,6 +364,7 @@ lesson_ls = {
         "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczP0qxn6PRrcaMeKoPJV9zoBy5nPkvMv5Kt4LqY6by33-W_Jl8tsV43AJ9r6jjX-9wMYIksITRG0dzEWHU6BRiJqMKGMWow715AP4rxt5QJTEs0xccE=w2400'>",
         "Category":"Rules",
         "Status":"16 of 18",
+        "Time": None,
     },
     "22":{
         "id": 22,
@@ -338,6 +373,7 @@ lesson_ls = {
         "Picture":"<img src='https://lh3.googleusercontent.com/pw/AP1GczPU6MhZhT_FxmM_A-DYf5r9C5utBM05CWSK0s7vCss11D7NtfmXcS8fbw2L0zWE7Ux488VigD0EEnQSOcWqymZB281WIZktkC97fTpZiZZL3KjaPq0=w2400'>",
         "Category":"Rules",
         "Status":"17 of 18",
+        "Time": None,
     },
     "23":{
         "id": 23,
@@ -347,6 +383,7 @@ lesson_ls = {
         "Example":"",
         "Category":"Rules",
         "Status":"18 of 18",
+        "Time": None,
     }
 }
 
@@ -393,6 +430,7 @@ def submit_answer(question_id):
     if question_key in quiz_qs:
         user_answer = request.form.get('answer')
         correct_answer = quiz_qs[question_key]['correct_answer']
+        quiz_qs['user_answer'] = user_answer
 
         # Check if the user's answer matches the correct answer
         is_correct = (user_answer == correct_answer)
