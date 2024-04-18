@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
+from datetime import datetime
 
 app = Flask(__name__)
 total_questions = 10
@@ -391,6 +392,7 @@ lesson_ls = {
 
 @app.route('/')
 def home():
+
     return render_template('homepage.html')
 
 @app.route('/quickstart')
@@ -399,12 +401,17 @@ def quickstart():
 
 @app.route('/overview')
 def overview():
+    visit_time = datetime.now()
+    print(f"Page visited at: {visit_time}")
 
     return render_template('overview.html')
 
 @app.route('/setup/<int:lesson_id>')
 def setup(lesson_id):
     """Serve a lesson page or redirect based on lesson_id."""
+    visit_time = datetime.now()
+    print(f"Page visited at: {visit_time}")
+
     lesson_key = str(lesson_id)
     if lesson_key in lesson_ls:
         lesson = lesson_ls[lesson_key]
