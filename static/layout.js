@@ -30,5 +30,4 @@ $('#no').click(function() {
     }
 });
 
-
 });
