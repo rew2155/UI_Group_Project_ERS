@@ -1,3 +1,14 @@
+.nav-men{
+    background-color: rgb(105, 4, 4);
+}
+
+.navbar-nav .nav-link.nav-el {
+    color: white; /* Apply white color to text */
+    padding-right: 75px;
+    padding-left: 75px;
+    font-size: 18px;
+}
+
 .drag_card {
     max-width: 200px;;
 }
@@ -12,4 +23,51 @@
 
 .right-aligned {
     float: right;
+}
+
+.left-aligned {
+    float: left;
+}
+
+.home-button{
+    background-color: white;
+    color:grey;
+    border-color: grey;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.home-button:hover{
+    background-color: rgb(225, 220, 220);
+}
+
+.home-msg{
+    margin-top: 180px;
+    margin-bottom: 50px;
+}
+
+.lesson-picture{
+    height:250px;
+    width: 450px;
+}
+
+#next{
+    background-color: rgb(105, 4, 4);
+    color: white;
+    font-size: 20px;
+}
+
+#next:hover{
+    background-color: rgb(151, 5, 5);
+}
+
+#prev{
+    background-color: rgb(105, 4, 4);
+    color: white;
+    font-size: 20px;
+}
+
+#prev:hover{
+    background-color: rgb(151, 5, 5);
 }
