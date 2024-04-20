@@ -48,8 +48,8 @@
 }
 
 .lesson-picture{
-    height:250px;
-    width: 450px;
+    height:210px;
+    width: 320px;
 }
 
 #next{
@@ -70,4 +70,12 @@
 
 #prev:hover{
     background-color: rgb(151, 5, 5);
+}
+
+.learn-heading{
+    font-size: 40px;
+}
+
+.category{
+    font-size: 25px;
 }

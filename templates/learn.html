@@ -8,10 +8,22 @@
         <body>
             <center><div>
                 <br>
-                <h1>{{ lesson['Title'] }}</h1>
+                <div class = "learn-heading">{{ lesson['Title'] }} <strong>{{ lesson['Title2'] }}</strong> </div>
 
                 <div>
-                    {{ lesson['Subtitle'] }}
+                    {{ lesson['Subtitle1'] }}
+                </div>
+
+                <strong><div>
+                    {{ lesson['bigNum']}}
+                </div></strong>
+
+                <div>
+                    {{ lesson['Subtitle2'] }}
+                </div>
+
+                <div>
+                    {{ lesson['Subtitle3'] }}
                 </div>
 
                 <br>
@@ -20,10 +32,15 @@
                 </div>
 
                 <div>
-                    {{ lesson['Category'] }}
+                    {{ lesson['Example']}}
                 </div>
 
                 <br>
+
+                <div class = "category">
+                    {{ lesson['Category'] }}
+                </div>
+
                 <div>
                     {{ lesson['Status'] }}
                 </div>
