@@ -501,7 +501,7 @@ def submit_answer(question_id):
         if next_question_id == "score":
             return redirect(url_for('result'))
         else:
-            return jsonify({'is_correct': is_correct, 'redirect': url_for('quiz', question_id=next_question_id)})
+            return jsonify({'is_correct': is_correct, 'exp': quiz_qs[question_key]['explanation'], 'redirect': url_for('quiz', question_id=next_question_id)})
     
     return "Invalid request", 400
 
