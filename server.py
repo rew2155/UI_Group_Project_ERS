@@ -18,6 +18,7 @@ quiz_qs = {
         "correct_answer": "answer4",
         "prev_q": None,
         "next_q": "2",
+        "explanation": "An Ace always indicates that a player gets 4 extra turns.",
         "user_answer": None,
     },
 
@@ -33,6 +34,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "1",
         "next_q": "3",
+        "explanation": "A Jack always indicates that a player gets 1 extra turn.",
         "user_answer": None,
     },
 
@@ -52,6 +54,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "2",
         "next_q": "4",
+        "explanation": "Player 2 appropriately slapped a King-2-King Sandwich, and can pick up the pile",
         "user_answer": None,
         },
 
@@ -67,6 +70,7 @@ quiz_qs = {
         "correct_answer": "answer3",
         "prev_q": "3",
         "next_q": "5",
+        "explanation": "Player 3 played a Queen and Player 1 did not play a face card within their two extra turns, so Player 3 gets to pick up the pile.",
         "user_answer": None,
     },
 
@@ -82,6 +86,7 @@ quiz_qs = {
         "correct_answer": "answer2",
         "prev_q": "4",
         "next_q": "6",
+        "explanation": "Player 1 did not slap the pile at an appropriate moment, so they must discard a penalty card.",
         "user_answer": None,
     },
 
@@ -97,6 +102,7 @@ quiz_qs = {
         "correct_answer": "answer2",
         "prev_q": "5",
         "next_q": "7",
+        "explanation": "You have only used one out of your three extra turns to play another face card, so you will have to play another card for your second extra turn.",
         "user_answer": None,
     },
 
@@ -112,6 +118,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "6",
         "next_q": "8",
+        "explanation": "You should slap the pile because there is now a Queen-Jack-Queen Sandwich.",
         "user_answer": None,
     },
 
@@ -127,6 +134,7 @@ quiz_qs = {
         "correct_answer": "answer3",
         "prev_q": "7",
         "next_q": "9",
+        "explanation": "You should slap the pile because there is now a Queen-Jack-Queen Sandwich.",
         "user_answer": None,
     },
 
@@ -142,6 +150,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "8",
         "next_q": "10",
+        "explanation": "A Jack always indicates that the next player should receive one extra turn.",
         "user_answer": None,
     },
     
@@ -157,6 +166,7 @@ quiz_qs = {
         "correct_answer": "answer4",
         "prev_q": "9",
         "next_q": "score",
+        "explanation": "The last card played was an Ace, and the card played before that was a Queen, so you would want to play a Queen to create a Queen-Ace-Queen Sandwich.",
         "user_answer": None,
     }
 }
@@ -491,7 +501,7 @@ def submit_answer(question_id):
         if next_question_id == "score":
             return redirect(url_for('result'))
         else:
-            return jsonify({'is_correct': is_correct, 'redirect': url_for('quiz', question_id=next_question_id)})
+            return jsonify({'is_correct': is_correct, 'exp': quiz_qs[question_key]['explanation'], 'redirect': url_for('quiz', question_id=next_question_id)})
     
     return "Invalid request", 400
 
