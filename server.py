@@ -18,7 +18,7 @@ quiz_qs = {
         "correct_answer": "answer4",
         "prev_q": None,
         "next_q": "2",
-        "explanation": "An Ace always indicates that a player gets 4 extra turns.",
+        "explanation": "<div> An Ace always indicates that a player gets 4 extra turns. </div>",
         "user_answer": None,
     },
 
@@ -34,7 +34,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "1",
         "next_q": "3",
-        "explanation": "A Jack always indicates that a player gets 1 extra turn.",
+        "explanation": "<div> A Jack always indicates that a player gets 1 extra turn. </div>",
         "user_answer": None,
     },
 
@@ -54,7 +54,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "2",
         "next_q": "4",
-        "explanation": "Player 2 appropriately slapped a King-2-King Sandwich, and can pick up the pile",
+        "explanation": "<div> Player 2 appropriately slapped a King-2-King Sandwich, and can pick up the pile. </div>",
         "user_answer": None,
         },
 
@@ -70,7 +70,7 @@ quiz_qs = {
         "correct_answer": "answer3",
         "prev_q": "3",
         "next_q": "5",
-        "explanation": "Player 3 played a Queen and Player 1 did not play a face card within their two extra turns, so Player 3 gets to pick up the pile.",
+        "explanation": "<div> Player 3 played a Queen and Player 1 did not play a face card within their two extra turns, so Player 3 gets to pick up the pile. </div>",
         "user_answer": None,
     },
 
@@ -86,7 +86,7 @@ quiz_qs = {
         "correct_answer": "answer2",
         "prev_q": "4",
         "next_q": "6",
-        "explanation": "Player 1 did not slap the pile at an appropriate moment, so they must discard a penalty card.",
+        "explanation": "<div> Player 1 did not slap the pile at an appropriate moment, so they must discard a penalty card. </div>",
         "user_answer": None,
     },
 
@@ -102,7 +102,7 @@ quiz_qs = {
         "correct_answer": "answer2",
         "prev_q": "5",
         "next_q": "7",
-        "explanation": "You have only used one out of your three extra turns to play another face card, so you will have to play another card for your second extra turn.",
+        "explanation": "<div> You have only used one out of your three extra turns to play another face card, so you will have to play another card for your second extra turn. </div>",
         "user_answer": None,
     },
 
@@ -118,7 +118,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "6",
         "next_q": "8",
-        "explanation": "You should slap the pile because there is now a Queen-Jack-Queen Sandwich.",
+        "explanation": "<div> You should slap the pile because there is now a Queen-Jack-Queen Sandwich. </div>",
         "user_answer": None,
     },
 
@@ -134,7 +134,7 @@ quiz_qs = {
         "correct_answer": "answer3",
         "prev_q": "7",
         "next_q": "9",
-        "explanation": "You should slap the pile because there is now a Queen-Jack-Queen Sandwich.",
+        "explanation": "<div> You should slap the pile because there is now a Queen-Jack-Queen Sandwich. </div>",
         "user_answer": None,
     },
 
@@ -150,7 +150,7 @@ quiz_qs = {
         "correct_answer": "answer1",
         "prev_q": "8",
         "next_q": "10",
-        "explanation": "A Jack always indicates that the next player should receive one extra turn.",
+        "explanation": "<div> A Jack always indicates that the next player should receive one extra turn. </div>",
         "user_answer": None,
     },
     
@@ -166,7 +166,7 @@ quiz_qs = {
         "correct_answer": "answer4",
         "prev_q": "9",
         "next_q": "score",
-        "explanation": "The last card played was an Ace, and the card played before that was a Queen, so you would want to play a Queen to create a Queen-Ace-Queen Sandwich.",
+        "explanation": "<div> The last card played was an Ace, and the card played before that was a Queen, so you would want to play a Queen to create a Queen-Ace-Queen Sandwich. </div>",
         "user_answer": None,
     }
 }
