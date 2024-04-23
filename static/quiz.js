@@ -36,7 +36,8 @@ $(document).ready(function(){
                         if (response.is_correct) {
                             $('#result').text('Correct!');
                         } else {
-                            $('#result').text('Incorrect!');
+                            $('#result').append('Incorrect!')
+                            $('#result').append(response.exp);
                         }
                     },
                     error: function(xhr, status, error) {

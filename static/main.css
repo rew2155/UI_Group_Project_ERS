@@ -35,7 +35,9 @@
     border-color: grey;
     margin-right: 20px;
     margin-left: 20px;
-    font-size: 20px;
+    padding-right:20px;
+    padding-left:20px;
+    font-size: 18px;
 }
 
 .home-button:hover{
@@ -45,6 +47,7 @@
 .home-msg{
     margin-top: 180px;
     margin-bottom: 50px;
+    font-size: 50px;
 }
 
 .lesson-picture{
