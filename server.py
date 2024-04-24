@@ -144,8 +144,8 @@ quiz_qs = {
         "situation": "<img id='situation' src='https://lh3.googleusercontent.com/pw/AP1GczNEqnPt9mhOK38n0I-reh-aftn0RMPkffsRB9vpK-J4fUxWZnOMxJjsotzgWCsn8HfCKnAZvaooqU0IcPMtYlaf8rqQUmWt0fWbl5GvUiqHjM_Fmqo=w2400' alt='Current pile'>",
         "question": "Drag and drop the card that would provide the next player 1 extra turn.",
         "answer1": "<img id='answer1' class='drag_card' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/English_pattern_jack_of_spades.svg/1200px-English_pattern_jack_of_spades.svg.png' alt='Option 1'>", 
-        "answer2": "<img id='answer2' class='drag_card' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/51_Q_di_picche.jpg/800px-51_Q_di_picche.jpg' alt='Option 2'>",
-        "answer3": "<img id='answer3' class='drag_card' src='https://m.media-amazon.com/images/I/71EkglvyWjL._AC_UF1000,1000_QL80_.jpg' alt='Option 3'>",
+        "answer2": "<img id='answer2' class='drag_card' src='https://upload.wikimedia.org/wikipedia/commons/c/ca/English_pattern_queen_of_spades.svg' alt='Option 2'>",
+        "answer3": "<img id='answer3' class='drag_card' src='https://upload.wikimedia.org/wikipedia/commons/1/1c/English_pattern_king_of_diamonds.svg' alt='Option 3'>",
         "answer4": "<img id='answer4' class='drag_card' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/English_pattern_ace_of_diamonds.svg/1200px-English_pattern_ace_of_diamonds.svg.png' alt='Option 4'>",
         "correct_answer": "answer1",
         "prev_q": "8",
@@ -162,7 +162,7 @@ quiz_qs = {
         "answer1": "<img id='answer1' class='drag_card' src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/5_of_clubs.svg/1200px-5_of_clubs.svg.png' alt='Option 1'>", 
         "answer2": "<img id='answer2' class='drag_card' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/7_of_clubs.svg/1200px-7_of_clubs.svg.png' alt='Option 2'>",
         "answer3": "<img id='answer3' class='drag_card' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/English_pattern_ace_of_diamonds.svg/1200px-English_pattern_ace_of_diamonds.svg.png' alt='Option 3'>",
-        "answer4": "<img id='answer4' class='drag_card' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/51_Q_di_picche.jpg/800px-51_Q_di_picche.jpg' alt='Option 4'>",
+        "answer4": "<img id='answer4' class='drag_card' src='https://upload.wikimedia.org/wikipedia/commons/c/ca/English_pattern_queen_of_spades.svg' alt='Option 4'>",
         "correct_answer": "answer4",
         "prev_q": "9",
         "next_q": "score",
@@ -510,14 +510,14 @@ def check_answer(question_id):
     # Retrieve the submitted answer from the AJAX request
     submitted_answer = request.form.get('answer')
 
+    question_key = str(question_id)
+
     # Retrieve the correct answer for the given question_id
     correct_answer = quiz_qs[str(question_id)]['correct_answer']
 
-    # Check if the submitted answer matches the correct answer
-    if submitted_answer == correct_answer:
-        return 'Correct!'
-    else:
-        return 'Incorrect!'
+    is_correct = (submitted_answer == correct_answer)
+
+    return jsonify({'is_correct': is_correct, 'exp': quiz_qs[question_key]['explanation']})
 
 @app.route('/result')
 def result():
