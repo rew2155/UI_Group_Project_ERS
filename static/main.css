@@ -51,8 +51,8 @@
 }
 
 .lesson-picture{
-    height:210px;
-    width: 320px;
+    max-height:225px;
+    max-width: 325px;
 }
 
 #next{
