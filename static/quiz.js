@@ -46,6 +46,8 @@ $(document).ready(function(){
                     }
                 });
             }
+
+            $('#next').prop('disabled', false);
         });
     }
 
@@ -79,6 +81,8 @@ $(document).ready(function(){
                 // Remove the last part of the URL after /quiz/1
                 let baseUrl = window.location.href.split('/quiz/')[0];
 
+                $('#next').prop('disabled', false);
+
                 // Make AJAX call to check if dropped answer is correct
                 $.ajax({
                     url: baseUrl + '/check-answer/' + question_id, // Pass the current question ID dynamically
@@ -86,7 +90,13 @@ $(document).ready(function(){
                     data: { answer: droppedAnswer },
                     success: function(response) {
                         // Display result message based on server response
-                        $('#result').text(response);
+                        $('#result').append(response.is_correct);
+                        if (response.is_correct) {
+                            $('#result').append("Correct!");
+                        } else {
+                            $('#result').append("Inorrect!");
+                            $('#result').append(response.exp);
+                        }
                     },
                     error: function(xhr, status, error) {
                         console.error('AJAX error:', error);
@@ -98,6 +108,7 @@ $(document).ready(function(){
 
     // Function to handle different question formats based on question ID
     function handleQuestionFormat() {
+        $('#next').prop('disabled', true);
         if (question_id < 9) {
             handleMultipleChoice();
         } else {
