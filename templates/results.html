@@ -4,15 +4,31 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Quiz Results</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='results.css')}}">
+
 </head>
+
 <body>
-    <h1>Quiz Completed</h1>
-    <p>You answered {{ correct_count }} out of {{ total_questions }} questions correctly!</p>
-    <a href="{{ url_for('home') }}">Try again</a>
+    <div class="results-body">
+        <div class="results-header"> Quiz Results! </div>
+        <div class="results-subheader"> Congrats! You finished the quiz</div>
+
+        <div class="results-box">
+            <div class="result"> You got</div>
+            <div class="result-score"> {{correct_count }} / {{total_questions}}</div>
+        </div>
+
+        <div class="want-to-try-again-text"> Want to try again? </div>
+        <a href="{{ url_for('home') }}" class="start-quiz-again">Try again!</a>
+    </div>
+
+
 </body>
+
 </html>
 
 {% endblock %}
