@@ -485,7 +485,7 @@ def submit_answer(question_id):
     if question_key in quiz_qs:
         user_answer = request.form.get('answer')
         correct_answer = quiz_qs[question_key]['correct_answer']
-        quiz_qs['user_answer'] = user_answer
+        quiz_qs[question_key]['user_answer'] = user_answer
 
         # Check if the user's answer matches the correct answer
         is_correct = (user_answer == correct_answer)
@@ -501,9 +501,25 @@ def submit_answer(question_id):
         if next_question_id == "score":
             return redirect(url_for('result'))
         else:
-            return jsonify({'is_correct': is_correct, 'exp': quiz_qs[question_key]['explanation'], 'redirect': url_for('quiz', question_id=next_question_id)})
+            return jsonify({'is_correct': is_correct, 'exp': quiz_qs[question_key]['explanation'], 'correct_answer': quiz_qs[question_key]['correct_answer'], 'redirect': url_for('quiz', question_id=next_question_id)})
     
     return "Invalid request", 400
+
+@app.route('/already-answered/<int:question_id>', methods=['POST'])
+def already_answered(question_id):
+    question_key = str(question_id)
+    alr_answered = None
+    exp = None
+    correct_answer = None
+    
+    if question_key in quiz_qs:
+        if quiz_qs[question_key]['user_answer']:
+            alr_answered = quiz_qs[question_key]['user_answer']
+            correct_answer = quiz_qs[question_key]['correct_answer']
+            exp = quiz_qs[question_key]['explanation']
+    
+    return jsonify({'user_answer': alr_answered, 'exp': exp, 'correct_answer': correct_answer})
+
 
 @app.route('/check-answer/<int:question_id>', methods=['POST'])
 def check_answer(question_id):
@@ -512,16 +528,24 @@ def check_answer(question_id):
 
     question_key = str(question_id)
 
+    quiz_qs[question_key]['user_answer'] = submitted_answer
+
     # Retrieve the correct answer for the given question_id
     correct_answer = quiz_qs[str(question_id)]['correct_answer']
 
     is_correct = (submitted_answer == correct_answer)
 
-    return jsonify({'is_correct': is_correct, 'exp': quiz_qs[question_key]['explanation']})
+    return jsonify({'is_correct': is_correct, 'exp': quiz_qs[question_key]['explanation'], 'correct_answer': quiz_qs[question_key]['correct_answer']})
 
 @app.route('/result')
 def result():
-    return render_template('results.html', correct_count=correct_counter[0], total_questions=total_questions)
+    score = 0
+    for question_id, question_info in quiz_qs.items():
+        if question_info['user_answer'] == question_info['correct_answer']:
+            score += 1
+        question_info['user_answer'] = None
+
+    return render_template('results.html', correct_count=score, total_questions=total_questions)
 if __name__ == '__main__':
 
     app.run(debug=True)

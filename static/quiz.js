@@ -8,12 +8,16 @@ $(document).ready(function(){
 
     // Function to handle multiple choice questions
     function handleMultipleChoice() {
+        user_answer = null;
+        correct_answer = null;
+
         // Function to handle click event on answer buttons
         $(document).on('click', 'button[id^="answer"]', function() {
             console.log('Button clicked!'); // Debug statement
 
             // Get the selected answer
             let selectedAnswer = $(this).attr('id');
+            user_answer = selectedAnswer;
 
             console.log('Selected answer:', selectedAnswer); // Debug statement
 
@@ -39,6 +43,8 @@ $(document).ready(function(){
                             $('#result').append('Incorrect!')
                             $('#result').append(response.exp);
                         }
+
+                        correct_answer = response.correct_answer;
                     },
                     error: function(xhr, status, error) {
                         // Handle error
@@ -49,6 +55,14 @@ $(document).ready(function(){
 
             $('#next').prop('disabled', false);
         });
+
+        if (correct_answer == user_answer) {
+            $('button[id=' + user_answer +']').prop('disabled', false);
+            $('button[id=' + user_answer +']').addClass('correct');
+        } else {
+            $('button[id=' + correct_answer +']').prop('disabled', false);
+            $('button[id=' + user_answer +']').addClass('incorrect');
+        }
     }
 
     // Function to handle drag-and-drop questions
@@ -62,11 +76,15 @@ $(document).ready(function(){
             });
         }
 
+        user_answer = null;
+        correct_answer = null;
+
         // Enable droppable for the situation image
         $('#situation').droppable({
             drop: function(event, ui) {
                 // Get the dropped answer image ID
                 let droppedAnswer = ui.draggable.attr('id');
+                user_answer = droppedAnswer;
 
                 console.log('Dropped answer:', droppedAnswer); // Debug statement
 
@@ -90,13 +108,14 @@ $(document).ready(function(){
                     data: { answer: droppedAnswer },
                     success: function(response) {
                         // Display result message based on server response
-                        $('#result').append(response.is_correct);
                         if (response.is_correct) {
                             $('#result').append("Correct!");
                         } else {
                             $('#result').append("Inorrect!");
                             $('#result').append(response.exp);
                         }
+
+                        correct_answer = response.correct_answer;
                     },
                     error: function(xhr, status, error) {
                         console.error('AJAX error:', error);
@@ -104,11 +123,48 @@ $(document).ready(function(){
                 });
             }
         });
+
+        if (correct_answer == user_answer) {
+            $('button[id=' + user_answer +']').prop('disabled', false);
+            $('button[id=' + user_answer +']').addClass('correct');
+        } else {
+            $('button[id=' + correct_answer +']').prop('disabled', false);
+            $('button[id=' + user_answer +']').addClass('incorrect');
+        }
+
+    }
+
+    function questionAnswered() {
+        let baseUrl = window.location.href.split('/quiz/')[0];
+        $.ajax({
+            url: baseUrl + '/already-answered/' + question_id,
+            type: 'POST',
+            success: function(response) {
+                if (response.user_answer == null) {
+                    console.log("reached");
+                    handleQuestionFormat();
+                } else {
+                    if (response.correct_answer == response.user_answer) {
+                        $('button[id^="answer"]').prop('disabled', true);
+                        // $('button[id=' + response.user_answer +']').prop('disabled', false);
+                        // $('button[id=' + response.user_answer +']').addClass('correct');
+                        $('#result').append("Correct!");
+                    } else {
+                        $('button[id^="answer"]').prop('disabled', true);
+                        // ('button[id=' + response.correct_answer +']').prop('disabled', false);
+                        // $('button[id=' + response.user_answer +']').addClass('incorrect');
+                        $('#result').append("Incorrect!");
+                        $('#result').append(response.exp);
+                    }
+                }
+            }
+        })
     }
 
     // Function to handle different question formats based on question ID
     function handleQuestionFormat() {
         $('#next').prop('disabled', true);
+
         if (question_id < 9) {
             handleMultipleChoice();
         } else {
@@ -118,7 +174,7 @@ $(document).ready(function(){
     }
 
     // Call the function to handle the question format
-    handleQuestionFormat();
+    questionAnswered();
 
     // Function to handle navigation to the previous question
     $('#prev').click(function() {
