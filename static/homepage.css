@@ -1,0 +1,114 @@
+
+
+.body {
+    background-color: #F1F1F1;
+}
+
+.home-headers {
+    display: flex;
+    /* Use flexbox to center the content */
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center align children horizontally */
+    justify-content: center;
+    /* Set the height of the container to full viewport height */
+    text-align: center;
+    /* Center the text within the container */
+}
+
+.home-icons {
+    margin-top: 5vw;
+    height: 2vw;
+    width: auto;
+}
+
+.home-msg {
+    margin: 0;
+    margin-top: 1vw;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    letter-spacing: .3vw;
+    font-weight: bold;
+}
+
+.home-subtitle {
+    margin: 0;
+    /* Remove default margin */
+    font-size: 1.2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
+
+
+
+/* Override Bootstrap's column padding for a full-height card display */
+.col-md-4 {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    /* This will make sure the cards stretch to the tallest one's height */
+}
+
+.card {
+    display: flex;
+    /* Enable flexbox */
+    flex-direction: column;
+    /* Stack the flex items vertically */
+    align-items: center;
+    /* Center align the flex items horizontally */
+    justify-content: center;
+    /* Center align the flex items vertically */
+    height: auto;
+    /* Set a minimum height that is greater than the width */
+    width: 25vw;
+    /* Width is smaller than the height */
+    margin: 1rem;
+    /* Provide some spacing around cards */
+}
+
+.card-title {
+    font-size: 1.3vw;
+    font-family: 'Playfair Display', 'Sans-serif';
+    font-weight: bold;
+}
+
+.card-img-top {
+    width: 80%;
+    /* Percentage of the card width */
+    height: 65%;
+    /* Maintain aspect ratio */
+    /* margin-bottom: 1rem; Space below the image */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    /* Flex-grow to fill available space */
+}
+
+.card .btn {
+    display: inline-block;
+    background-color: #640000; /* Adjust color to match your button */
+    color: white;
+    padding: .4vw 1.2vw; /* Adjust padding to change size, while keeping text centered */
+    font-size: .8vw; /* Adjust font size as needed */
+    border: none;
+    border-radius: 4px; /* Adjust for rounded corners */
+    line-height: 1; /* Default line height to ensure vertical centering */
+    vertical-align: middle; /* This aligns the text vertically */
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
+/* Hover effect for buttons */
+.container .row .col-md-4 .card button:hover {
+    background: #c9302c;
+    /* Darker shade for hover effect */
+}
