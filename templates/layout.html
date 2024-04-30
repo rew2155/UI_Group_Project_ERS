@@ -43,7 +43,9 @@
 <body>
 
     <nav class="navbar">
-        <img src="/static/images/logo.png" alt="Logo" class="navbar-logo">
+        <a href="/">
+            <img src="/static/images/logo.png" alt="Logo" class="navbar-logo">
+        </a>
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/setup/1">Setup</a></li>
@@ -52,6 +54,7 @@
             <li><a href="/quiz/1">Quiz</a></li>
         </ul>
     </nav>
+    
 
     <div class="container">
         {% block content %}
