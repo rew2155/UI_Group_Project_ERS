@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         $('#prev').show().attr('href', prevUrl);
         $('#prev').text('< Prev');
     }
+
+    if (lesson_id < 6){
+        $('#exp').hide();
+    }
     
 
     // Update the Next button's properties
