@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Update the Previous button's properties
     if (lesson_id === 0) {
         $('#prev').hide();
+    } else if (lesson_id === 1) {
+        prevUrl = '/'
+        $('#prev').show().attr('href', prevUrl);
+        $('#prev').text('Return to Home');
     } else {
         $('#prev').show().attr('href', prevUrl);
         if (lesson_id === 6) {
