@@ -24,7 +24,7 @@ quiz_qs = {
 
     "2":{
         "id": 2,
-        "prompt": "The pile currently looks like this 2:",
+        "prompt": "The pile currently looks like this:",
         "situation": "<img id='situation' class='situation_img' src='https://www.wargamer.com/wp-content/sites/wargamer/2022/04/playing-card-games-kemps.jpg' alt='Situation Image'>", 
         "question": "How many extra turns does the following player get?",
         "answer1": "<button id='answer1' class='btn'>1 turn</button>", 
