@@ -80,8 +80,8 @@
 }
 
 .drag_card {
-    max-width: 5vw;
-    max-height: 10vw;
+    max-width: 8.5vw;
+    /* max-height: 10vw; */
 }
 
 /* The Modal (background) */
