@@ -27,25 +27,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (lesson_id === 0) {
         $('#prev').hide();
     } else if (lesson_id === 1) {
-        prevUrl = '/'
+        prevUrl = '/';
         $('#prev').show().attr('href', prevUrl);
-        $('#prev').text('Return to Home');
+        $('#prev').text('< Home');
+    } else if (lesson_id === 6) {
+        prevUrl = '/setup/1';
+        $('#prev').show().attr('href', prevUrl);
+        $('#prev').text('< Back to Setup');
     } else {
         $('#prev').show().attr('href', prevUrl);
-        if (lesson_id === 6) {
-            $('#prev').text('Go to Setup & Gameplay');
-        } else {
-            $('#prev').text('Previous');
-        }
+        $('#prev').text('< Prev');
     }
+    
 
     // Update the Next button's properties
     if (lesson_id === 5) {
-        $('#next').text('Go to Rules').attr('href', '/setup/6');
+        $('#next').text('Rules >').attr('href', '/setup/6');
     } else if (lesson_id === 23) {
-        $('#next').text('Go to an overview of rules').attr('href', '/quickstart');
+        $('#next').text('Overview >').attr('href', '/quickstart');
     } else if (lesson_id < 23) {
-        $('#next').show().text('Next').attr('href', nextUrl);
+        $('#next').show().text('Next >').attr('href', nextUrl);
     } else {
         $('#next').hide();
     }
