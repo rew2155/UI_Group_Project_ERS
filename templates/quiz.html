@@ -3,17 +3,69 @@
 {% block content%}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+     <!-- Head content -->
+    <!-- Make sure jQuery and jQuery UI are loaded before your custom script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
-    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Ensure your script path is correct -->
+    <script type="text/javascript" src="{{ url_for('static', filename='quiz.js') }}"></script>
+    <!-- Ensure your CSS path is correct -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+
     <title>Quiz Question - {{ question['question'] }}</title>
 </head>
+
 <body>
+    <div class="question-container">
+        <div class="quiz-question-number"> Question {{ question['id'] }} </div>
+        <hr>
+        <div class="prompt"> <strong>Prompt: </strong>{{ question['prompt'] }}</div>
+        <div class="question-image" id="situation">{{ question['situation'] | safe}}</div>
+        <div class="question"><strong>Question: </strong> {{ question['question'] }}</div>
+
+        <div class="answer-options">
+
+            {{question.answer1 | safe}}
+            {{question.answer2 | safe}}
+            {{question.answer3 | safe}}
+            {{question.answer4 | safe}}
+
+        </div>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="resultText">Your result will appear here.</p>
+        </div>
+    </div>
+
+    <div class="nav-status-container">
+        <div class="row learn-navigation justify-content-center align-items-center">
+            <div class="col-md-4 d-flex justify-content-center">
+                <button id="prev" class="btn">&lt; Prev</button>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <div class="category">
+                    Quiz
+                </div>
+                <div class="status">
+                    {{question['id']}} / 10
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center">
+                <button id="next" class="btn">Next &gt;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 
     <div class="container">
         <div class="row"></div>
             <h1 class="centered">{{ question['prompt'] }}</h1>
@@ -23,7 +75,7 @@
             </div>
             <h2 class="centered">{{ question['question'] }}</h2>
 
-            <!----
+            
             <form action="{{ url_for('submit_answer', question_id=question['id']) }}" method="post">
                 {% for answer in question['answers'] %}
                 
@@ -31,7 +83,7 @@
                     <label for="answer{{ loop.index }}">{{ answer }}</label>
                 
                 {% endfor %}
-            ---->
+            
             <div class="centered">
 
                 {{question.answer1 | safe}}
@@ -49,7 +101,8 @@
             <button id="prev">&lt;Prev</button>
             <button id="next" class="right-aligned">Next&gt;</button>
         </div>
-    </div>
+    </div> -->
 </body>
+
 </html>
 {% endblock %}

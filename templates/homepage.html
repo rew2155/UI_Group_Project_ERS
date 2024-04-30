@@ -3,60 +3,65 @@
 {% block content%}
 
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the Quiz</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='homepage.css')}}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to the Quiz</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='homepage.css')}}">
 
 </head>
+
 <body>
-    <main>
+  <main>
 
-      <div></div>
+    <div></div>
 
-      <div class="home-headers">
-        <img src="/static/images/icons.png" class="home-icons" alt="icons">
-        <h1 class = "home-msg">Egyptian Rat Screw</h1>
-        <div class="home-subtitle">Learn how to play Egyptian Rat Screw!</div>
-      </div>
-        <br>
-        <hr>
+    <div class="home-headers">
+      <img src="/static/images/icons.png" class="home-icons" alt="icons">
+      <h1 class="home-msg">Egyptian Rat Screw</h1>
+      <div class="home-subtitle">Learn how to play Egyptian Rat Screw!</div>
+    </div>
+    <br>
+    <hr>
 
-        <div class="container mt-5">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card text-center">
-                  <img src="/static/images/undraw_Tutorial_video_re_wepc.png" class="card-img-top mx-auto" alt="New to the Game?">
-                  <div class="card-body">
-                    <h5 class="card-title">Test you Knowledge</h5>
-                    <a href="/quiz/1" class="btn btn-primary">Start here</a>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card text-center">
-                  <img src="/static/images/undraw_playing_cards_cywn (1).png" class="card-img-top mx-auto" alt="Want a refresher of the rules?">
-                  <div class="card-body">
-                    <h5 class="card-title">Want a summary of the rules?</h5>
-                    <a href="/quickstart" class="btn btn-primary">Start here</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card text-center">
-                  <img src="/static/images/undraw_Book_lover_re_rwjy.png" class="card-img-top mx-auto" alt="What you'll need">
-                  <div class="card-body">
-                    <h5 class="card-title">New to the Game?</h5>
-                    <a href="/setup/1" class="btn btn-primary">Start here</a>
-                  </div>
-                </div>
-              </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-center">
+            <img src="/static/images/undraw_Book_lover_re_rwjy.png" class="card-img-top mx-auto" alt="What you'll need">
+            <div class="card-body">
+              <h5 class="card-title">New to the Game?</h5>
+              <a href="/setup/1" class="btn btn-primary">Start here</a>
             </div>
           </div>
-    </main>
+
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <img src="/static/images/undraw_playing_cards_cywn (1).png" class="card-img-top mx-auto"
+              alt="Want a refresher of the rules?">
+            <div class="card-body">
+              <h5 class="card-title">Want a summary of the rules?</h5>
+              <a href="/quickstart" class="btn btn-primary">Start here</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <img src="/static/images/undraw_Tutorial_video_re_wepc.png" class="card-img-top mx-auto"
+              alt="New to the Game?">
+            <div class="card-body">
+              <h5 class="card-title">Test your Knowledge</h5>
+              <a href="/quiz/1" class="btn btn-primary">Start here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
+
 </html>
 
 {% endblock %}
