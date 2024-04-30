@@ -11,7 +11,10 @@
 }
 
 .height-control{
-    height: 600px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 80vh; /* Set height to 100% of viewport height */
 }
 
 .quiz-question-number {
@@ -27,7 +30,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1vw;
     letter-spacing: 0.05vw;
-    margin-top: 2vw;
+    margin-top: 1vw;
     margin-bottom: 1vw;
     
 }
