@@ -23,19 +23,21 @@
         </div>
 
         <div class="want-to-try-again-text"> Want to try again? </div>
-        <a href="{{ url_for('home') }}" class="start-quiz-again">Try again!</a>
+        <a href="{{ url_for('home') }}" class="start-quiz-again">Do the Quiz Again!</a>
     </div>
 
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col-md-4">
-                <a href="/quickstart" class="btn btn-primary">Start here</a>
-            </div>
-            <div class="col-md-4">
-                <a href="/quickstart" class="btn btn-primary">Start here</a>
+    <div class="nav-status-container">
+        <div class="row learn-navigation justify-content-center align-items-center">
+            <div class="col-md-6 d-flex justify-content-center">
+                <a href="/quickstart" class="btn btn-primary" id="prev">Review a summary of the rules</a>
             </div>
 
+            <div class="col-md-6 d-flex justify-content-center">
+                <a href="/setup/6" class="btn btn-primary" id="next">Go through the tutorial again</a>
+            </div>
         </div>
+    </div>
+
 </body>
 
 </html>

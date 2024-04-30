@@ -33,10 +33,10 @@
     margin-top: 3vw;
     margin-bottom: 3vw;
     border: black solid 1px;
-    padding-top: 5vw;
-    padding-bottom: 5vw;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
 }
 
 .result {
@@ -54,13 +54,13 @@
 
 .want-to-try-again-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-weight: 100;
 }
 
 .start-quiz-again {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3vw;
+    font-size: 1vw;
     font-weight: 100;
     color: darkgrey;
     text-decoration: underline;
@@ -73,4 +73,24 @@
     justify-content: center;
     align-items: stretch;
     /* This will make sure the cards stretch to the tallest one's height */
+}
+
+.nav-status-container {
+    margin-top: 3vw;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #640000; /* Adjust color to match your button */
+    color: white;
+    padding: .4vw 1.2vw; /* Adjust padding to change size, while keeping text centered */
+    font-size: .8vw; /* Adjust font size as needed */
+    border: none;
+    border-radius: 4px; /* Adjust for rounded corners */
+    line-height: 1; /* Default line height to ensure vertical centering */
+    vertical-align: middle; /* This aligns the text vertically */
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
 }
