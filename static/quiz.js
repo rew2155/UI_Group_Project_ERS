@@ -15,21 +15,15 @@ $(document).ready(function() {
                     console.log("reached");
                     handleQuestionFormat();
                 } else {
-                    $('button[id^="answer"]').prop('disabled', true);
-                    $('button[id=' + response.user_answer + ']').addClass('selected');
-                    //if (response.correct_answer == response.user_answer) {
-                        //$('button[id^="answer"]').prop('disabled', true);
-                        //$().addClass('selected');
-                        // $('button[id=' + response.user_answer +']').prop('disabled', false);
-                        // $('button[id=' + response.user_answer +']').addClass('correct');
-                        //$('#result').append("Correct!");
-                    //} else {
-                        //$('button[id^="answer"]').prop('disabled', true);
-                        // ('button[id=' + response.correct_answer +']').prop('disabled', false);
-                        // $('button[id=' + response.user_answer +']').addClass('incorrect');
-                        //$('#result').append("Incorrect!");
-                        //$('#result').append(response.exp)
-                    //}
+                    if (question_id < 9) {
+                        $('button[id^="answer"]').prop('disabled', true);
+                        $('button[id=' + response.user_answer + ']').addClass('selected');
+                    } else {
+                        $('img[id^="answer"]').prop('disabled', true);
+                        $('img[id^="answer"]').addClass('disabled');
+                        $('img[id=' + response.user_answer + ']').removeClass('disabled');
+                        $('img[id=' + response.user_answer + ']').addClass('dropped');
+                    }
                 }
             }
         })
