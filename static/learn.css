@@ -6,6 +6,14 @@
     height: 330px;
 }
 
+.setup_exps {
+    margin-top: 2.5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2vw;
+    letter-spacing: 0.05vw;
+    margin-bottom: .5vw;
+}
+
 .learning-header {
     font-family: 'Playfair Display', sans-serif;
     font-size: 2vw;
@@ -26,6 +34,7 @@
 
 .left-section {
     border-right: solid 1px lightgray;
+    height: 350px;
 }
 
 .section.right {
@@ -34,7 +43,7 @@
 
 .explanation-header,
 .example-header {
-    margin-top: 5vw;
+    margin-top: 4vw;
     font-family: 'Montserrat', sans-serif;
     font-size: 1vw;
     font-weight: bold;
@@ -45,7 +54,7 @@
 .explanation-text,
 .example-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1vw;
+    font-size: 1.1vw;
     font-weight: 100;
     letter-spacing: 0.05vw;
     margin-bottom: 5vw;
