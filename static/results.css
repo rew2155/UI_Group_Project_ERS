@@ -65,3 +65,12 @@
     color: darkgrey;
     text-decoration: underline;
 }
+
+/* Override Bootstrap's column padding for a full-height card display */
+.col-md-4 {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    /* This will make sure the cards stretch to the tallest one's height */
+}

@@ -1,16 +1,65 @@
-.nav-men{
-    background-color: rgb(105, 4, 4);
+.navbar {
+    background-color: #640000;
+    /* Dark red color */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5vw 2vw;
 }
 
-.navbar-nav .nav-link.nav-el {
-    color: white; /* Apply white color to text */
-    padding-right: 75px;
-    padding-left: 75px;
-    font-size: 18px;
+.navbar li {
+    padding: 0 2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    letter-spacing: .1vw;
+    /* Increase the left and right padding */
 }
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    width: 7vw;
+    padding: 0.1vw;
+}
+
+.navbar-logo img {
+    margin-right: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.bottom-bar {
+    position: fixed; /* Fixed position to stick at the bottom */
+    left: 0;
+    bottom: 0; /* Aligns the div to the bottom of the screen */
+    width: 100%; /* Full width */
+    height: .75vw; /* Thin bar, adjust the height as needed */
+    background-color: #640000; /* Dark red color */
+    z-index: 1000; /* Ensures it stays above other elements */
+  }
+
+
+
+
 
 .drag_card {
-    max-width: 200px;;
+    max-width: 200px;
+    ;
 }
 
 .situation_img {
@@ -31,36 +80,36 @@
 
 
 
-.lesson-picture{
-    max-height:225px;
+.lesson-picture {
+    max-height: 225px;
     max-width: 325px;
 }
 
-#next{
+#next {
     background-color: rgb(105, 4, 4);
     color: white;
     font-size: 20px;
 }
 
-#next:hover{
+#next:hover {
     background-color: rgb(151, 5, 5);
 }
 
-#prev{
+#prev {
     background-color: rgb(105, 4, 4);
     color: white;
     font-size: 20px;
 }
 
-#prev:hover{
+#prev:hover {
     background-color: rgb(151, 5, 5);
 }
 
-.learn-heading{
+.learn-heading {
     font-size: 40px;
 }
 
-.category{
+.category {
     font-size: 25px;
 }
 
