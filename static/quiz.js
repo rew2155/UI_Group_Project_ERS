@@ -2,7 +2,38 @@ $(document).ready(function() {
     let currentPath = window.location.pathname;
     let question_id = parseInt(currentPath.split("/quiz/")[1], 10);
 
-    $('#next').prop('disabled', true); // Initially disable the Next button
+    questionAnswered();
+
+    function questionAnswered() {
+        let baseUrl = window.location.href.split('/quiz/')[0];
+        $.ajax({
+            url: baseUrl + '/already-answered/' + question_id,
+            type: 'POST',
+            success: function(response) {
+                if (response.user_answer == null) {
+                    $('#next').prop('disabled', true); // Initially disable the Next button
+                    console.log("reached");
+                    handleQuestionFormat();
+                } else {
+                    $('button[id^="answer"]').prop('disabled', true);
+                    $('button[id=' + response.user_answer + ']').addClass('selected');
+                    //if (response.correct_answer == response.user_answer) {
+                        //$('button[id^="answer"]').prop('disabled', true);
+                        //$().addClass('selected');
+                        // $('button[id=' + response.user_answer +']').prop('disabled', false);
+                        // $('button[id=' + response.user_answer +']').addClass('correct');
+                        //$('#result').append("Correct!");
+                    //} else {
+                        //$('button[id^="answer"]').prop('disabled', true);
+                        // ('button[id=' + response.correct_answer +']').prop('disabled', false);
+                        // $('button[id=' + response.user_answer +']').addClass('incorrect');
+                        //$('#result').append("Incorrect!");
+                        //$('#result').append(response.exp)
+                    //}
+                }
+            }
+        })
+    }
 
     function showResultPopup(message) {
         $('#resultText').text(message);
@@ -73,11 +104,14 @@ $(document).ready(function() {
         });
     }
 
-    if (question_id < 9) {
-        handleMultipleChoice();
-    } else {
-        handleDragAndDrop();
+    function handleQuestionFormat() {
+        if (question_id < 9) {
+            handleMultipleChoice();
+        } else {
+            handleDragAndDrop();
+        }
     }
+
 
     $('#prev').click(function() {
         let prevQuestionID = question_id - 1;
