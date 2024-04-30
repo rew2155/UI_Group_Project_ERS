@@ -75,12 +75,12 @@
 }
 
 .situation_img {
-    max-width: 20vw;
-    max-height: 15vw;
+    max-width: 14vw;
+    /* max-height: 15vw; */
 }
 
 .drag_card {
-    max-width: 8.5vw;
+    max-width: 7.5vw;
     /* max-height: 10vw; */
 }
 
