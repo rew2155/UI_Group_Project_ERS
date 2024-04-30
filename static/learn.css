@@ -2,6 +2,10 @@
     margin-top: 3vw;
 }
 
+.height-control{
+    height: 300px;
+}
+
 .learning-header {
     font-family: 'Playfair Display', sans-serif;
     font-size: 2vw;
