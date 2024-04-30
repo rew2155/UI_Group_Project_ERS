@@ -176,7 +176,7 @@ lesson_ls = {
     "1": {
         "id": 1,
         "Title": "What You Need",
-        "Subtitle1": "Standard 52-card deck of playing cards. You are allowed 2-10 players",
+        "Subtitle1": "Standard 52-card deck of playing cards. You are allowed 2-10 players.",
         "Picture": "https://lh3.googleusercontent.com/pw/AP1GczNvOZMAFdBRAdjN-Ob2zmBrGdP-J8Kw7ykEFMKL6Yn8X-uZV7T0LE9U2gWwEhrHWrivacdBrPkWC7AxY3vht8voL2xOvMS52tfQokdDIs4Iy7DxwvM=w2400",
         "Category": "Setup & Gameplay",
         "Status": "1 of 5",

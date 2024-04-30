@@ -18,18 +18,21 @@
         <div class="container mt-5">
             <div class="height-control row">
                 <div class="col-md-5">
-                    <div class="explanation-header"> Explanation </div>
+                    {% if lesson['id'] >= 6 %}
+                    <div class="explanation-header">Explanation</div>
                     <div class="explanation-text"> {{ lesson['Subtitle1'] }}</div>
                     <div class="example-header"> Example </div>
                     <div class="example-text"> {{ lesson['Example'] }}</div>
-
+                    {% else %}
+                    <div class="explanation-header"></div>
+                    <br><br>
+                    <div class="setup-text"> {{ lesson['Subtitle1'] }}</div>
+                    {% endif %}
                 </div>
-
                 <div class="col-md-1 left-section"></div>
-
                 <div class="col-md-6 right-section">
                     <div class="diagram">
-                        <center><img class="lesson-picture" src="{{ lesson.Picture }}" alt="{{lesson ['Title'] }}"></center>
+                        <center><img class="lesson-picture" src="{{ lesson.Picture }}" alt="{{ lesson['Title'] }}"></center>
                     </div>
                 </div>
             </div>
