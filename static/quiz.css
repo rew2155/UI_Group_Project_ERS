@@ -10,6 +10,10 @@
     /* Center the text within the container */
 }
 
+.height-control{
+    height: 400px;
+}
+
 .quiz-question-number {
 
     font-family: 'Playfair Display', sans-serif;
