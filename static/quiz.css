@@ -80,8 +80,18 @@
 }
 
 .drag_card {
-    max-width: 5vw;
-    max-height: 10vw;
+    max-width: 8.5vw;
+    /* max-height: 10vw; */
+}
+
+.dropped {
+    border: 5px solid goldenrod;
+    border-radius: 15px;
+    /*filter: grayscale(0%);*/
+}
+
+.disabled {
+    filter: grayscale(100%);
 }
 
 /* The Modal (background) */
@@ -105,6 +115,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    align-content: center;
 }
 
 /* The Close Button */
@@ -126,3 +137,5 @@ button.selected {
     background-color: goldenrod;
     color: white;
 }
+
+
