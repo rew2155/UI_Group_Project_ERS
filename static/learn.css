@@ -1,0 +1,82 @@
+.learn-container {
+    margin-top: 3vw;
+}
+
+.learning-header {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 2vw;
+    font-weight: 800;
+    letter-spacing: .3vw;
+    margin-bottom: 2vw;
+    display: flex;
+    /* Use flexbox to center the content */
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center align children horizontally */
+    justify-content: center;
+    /* Set the height of the container to full viewport height */
+    text-align: center;
+    /* Center the text within the container */
+}
+
+.left-section {
+    border-right: solid 1px lightgray
+}
+
+.section.right {
+    border-left: solid 1px lightgray
+}
+
+.explanation-header,
+.example-header {
+    margin-top: 5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    font-weight: bold;
+    letter-spacing: 0.05vw;
+    margin-bottom: .5vw;
+}
+
+.explanation-text,
+.example-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    font-weight: 100;
+    letter-spacing: 0.05vw;
+    margin-bottom: 5vw;
+}
+
+.example-header:empty {
+    display: none;
+}
+
+.example-text:empty {
+    display: none;
+}
+
+.lesson-picture {
+    width: 20vw;
+    height: auto;
+    margin: 4vw;
+}
+
+.nav-status-container {
+    margin-top: 5vw;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #640000; /* Adjust color to match your button */
+    color: white;
+    padding: .4vw 1.2vw; /* Adjust padding to change size, while keeping text centered */
+    font-size: .8vw; /* Adjust font size as needed */
+    border: none;
+    border-radius: 4px; /* Adjust for rounded corners */
+    line-height: 1; /* Default line height to ensure vertical centering */
+    vertical-align: middle; /* This aligns the text vertically */
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+

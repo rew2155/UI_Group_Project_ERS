@@ -1,55 +1,63 @@
 {% extends "layout.html" %}
 
 {% block content%}
-    <html>
-        <head>
-            <script type="text/javascript" src="{{ url_for('static', filename = 'layout.js') }}"></script>
-        </head>
-        <body>
-            <center><div>
-                <br>
-                <div class = "learn-heading">{{ lesson['Title'] }} <strong>{{ lesson['Title2'] }}</strong> </div>
+<html>
 
-                <div>
-                    {{ lesson['Subtitle1'] }}
+<head>
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename = 'layout.js') }}"></script> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='learn.css')}}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="learn-container">
+
+        <div class="learning-header"> {{ lesson['Title'] }} {{ lesson['Title2'] }}</div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 left-section">
+                    <div class="explanation-header"> Explanation </div>
+                    <div class="explanation-text"> {{ lesson['Subtitle1'] }}</div>
+                    <div class="example-header"> Example </div>
+                    <div class="example-text"> {{ lesson['Example'] }}</div>
+
                 </div>
-
-                <strong><div>
-                    {{ lesson['bigNum']}}
-                </div></strong>
-
-                <div>
-                    {{ lesson['Subtitle2'] }}
+                <div class="col-md-6 right-section">
+                    <div class="diagram">
+                        <img class="lesson-picture" src="{{ lesson.Picture }}" alt="{{lesson ['Title'] }}">
+                    </div>
                 </div>
+            </div>
 
-                <div>
-                    {{ lesson['Subtitle3'] }}
+            <div class="nav-status-container">
+                <div class="row learn-navigation justify-content-center align-items-center">
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <a href="#" class="btn btn-primary" id="prev">Previous</a>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <div class="category">
+                            {{ lesson['Category'] }}
+                        </div>
+                        <div class="status">
+                            {{ lesson['Status'] }}
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <a href="#" class="btn btn-primary" id="next">Next</a>
+                    </div>
                 </div>
+            </div>
+        </div>
 
-                <br>
-                <div>
-                    <img class="lesson-picture" src="{{ lesson.Picture }}" alt="{{lesson ['Title'] }}">
-                </div>
 
-                <div>
-                    {{ lesson['Example']}}
-                </div>
+        <script src="{{ url_for('static', filename='learn.js') }}"></script>
 
-                <br>
+</body>
 
-                <div class = "category">
-                    {{ lesson['Category'] }}
-                </div>
-
-                <div>
-                    {{ lesson['Status'] }}
-                </div>
-
-                <br>
-                <button id="prev" class="left-aligned">&lt;Prev</button>
-                <button id="next" class="right-aligned">Next&gt;</button>
-            </div></center>
-    </body>
-    </html>
+</html>
 
 {% endblock %}

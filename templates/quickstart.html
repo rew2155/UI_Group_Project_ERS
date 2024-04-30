@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content%}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script type="text/javascript" src="{{ url_for('static', filename = 'quickstart.js') }}"></script>
-    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='quickstart.css')}}">
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -18,7 +20,7 @@
                 <div class="p-3 border bg-light">
                     <div class="class-title">Setup & Requirements</div>
                     <br>
-                 
+
                     <li>
                         52 cards
                     </li>
@@ -34,7 +36,7 @@
                     <li>
                         Goal: Get all the cards
                     </li>
-                    
+
                 </div>
             </div>
             <div class="col-md-4">
@@ -72,7 +74,7 @@
             <div class="col-md-4">
                 <!-- Content for the third column -->
                 <div class="p-3 border bg-light">
-                    <div class = "class-title">Face Cards & Aces</div>
+                    <div class="class-title">Face Cards & Aces</div>
                     <br>
                     <li>
                         Jack = 1 extra turn
@@ -87,13 +89,16 @@
                         Ace = 4 extra turns
                     </li>
                     <li>
-                        If a player fails to play a face card or ace during extra turns, the last player who did play one collects the pile
+                        If a player fails to play a face card or ace during extra turns, the last player who did play
+                        one collects the pile
                     </li>
                     <li>
-                        Should a player deplete their cards during extra turns, the next player continues from where they stopped
+                        Should a player deplete their cards during extra turns, the next player continues from where
+                        they stopped
                     </li>
                     <li>
-                        During a chain of extra turns, any player can interrupt by slapping the pile if a slap opportunity occurs, claiming the pile.
+                        During a chain of extra turns, any player can interrupt by slapping the pile if a slap
+                        opportunity occurs, claiming the pile.
                     </li>
 
 
@@ -101,11 +106,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <button id="prev" class="left-aligned">&lt;Prev</button>
-                <button id="next" class="right-aligned">Next&gt;</button>
+            <div class="col-md-12 next-section">
+                <button id="prev" class="left-aligned btn">&lt; Have a look at the rules again</button>
+                <button id="next" class="right-aligned btn">Do a quiz! &gt;</button>
             </div>
         </div>
     </div>
 
-{% endblock %}
+    {% endblock %}
