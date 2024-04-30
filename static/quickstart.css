@@ -17,3 +17,15 @@
 .next-section {
     margin-top: 3vw;
 }
+
+.middle-card{
+    border: 1px solid black;
+}
+
+.card-title{
+    color: #9d0101;
+}
+
+.card{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

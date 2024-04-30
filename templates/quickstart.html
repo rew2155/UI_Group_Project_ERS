@@ -2,106 +2,73 @@
 
 {% block content%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script type="text/javascript" src="{{ url_for('static', filename = 'quickstart.js') }}"></script>
-    <link rel="stylesheet" href="{{url_for('static', filename='quickstart.css')}}">
-</head>
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'quickstart.js') }}"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='quickstart.css')}}">
+    </head>
 <body>
     <div class="container-fluid">
+        <br>
+        <div class="rules-title">
+            <h1>Summary of Rules</h1>
+        </div>
+        <br>
         <div class="row">
             <div class="col-md-4">
-                <!-- Content for the first column -->
-                <div class="p-3 border bg-light">
-                    <div class="class-title">Setup & Requirements</div>
-                    <br>
-
-                    <li>
-                        52 cards
-                    </li>
-                    <li>
-                        2-10 people
-                    </li>
-                    <li>
-                        Distribute all cards equally among players (Face Down)
-                    </li>
-                    <li>
-                        Flow of gameplay is clockwise (starting with the player after the dealer)
-                    </li>
-                    <li>
-                        Goal: Get all the cards
-                    </li>
-
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">When to Slap</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">Doubles (two same value cards)</li>
+                            <li class="list-group-item">Sandwiches (e.g. 7-4-7)</li>
+                            <li class="list-group-item">Marriages (consecutive Q and K or K and Q)</li>
+                            <li class="list-group-item">Sums to 10</li>
+                        </ul>
+                        <br>
+                        <h3 class="card-title">Other Rules</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">You can block other players before they slap by placing another card</li>
+                            <li class="list-group-item">Penalty: place the top card on the bottom of the pile (if slapped at the wrong time)</li>
+                            <li class="list-group-item">Player with the most fingers on the pile wins the cards</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <!-- Content for the second column -->
-                <div class="p-3 border bg-light">
-                    <div class="class-title">When to Slap</div>
-                    <br>
-                    <li>
-                        Doubles (two same value cards)
-                    </li>
-                    <li>
-                        Sandwiches (e.g. 7-4-7)
-                    </li>
-                    <li>
-                        Marriages (consecutive Q and K or K and Q)
-                    </li>
-                    <li>
-                        Sums to 10
-                    </li>
-                    <br>
-
-                    <div class="class-title"> Other Rules</div>
-                    <br>
-                    <li>
-                        You can block other players before they slap by placing another card
-                    </li>
-                    <li>
-                        Penalty: place the top card on the bottom of the pile (if slapped at the wrong time)
-                    </li>
-                    <li>
-                        Player with the most fingers on the pile wins the cards
-                    </li>
+                <div class="middle-card card">
+                    <div class="card-body">
+                        <h3 class="card-title">Setup & Requirements</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">52 cards</li>
+                            <li class="list-group-item">2-10 people</li>
+                            <li class="list-group-item">Distribute all cards equally among players (Face Down)</li>
+                            <li class="list-group-item">Flow of gameplay is clockwise (starting with the player after the dealer)</li>
+                            <li class="list-group-item">Goal: Get all the cards</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <!-- Content for the third column -->
-                <div class="p-3 border bg-light">
-                    <div class="class-title">Face Cards & Aces</div>
-                    <br>
-                    <li>
-                        Jack = 1 extra turn
-                    </li>
-                    <li>
-                        Queen = 2 extra turns
-                    </li>
-                    <li>
-                        King = 3 extra turns
-                    </li>
-                    <li>
-                        Ace = 4 extra turns
-                    </li>
-                    <li>
-                        If a player fails to play a face card or ace during extra turns, the last player who did play
-                        one collects the pile
-                    </li>
-                    <li>
-                        Should a player deplete their cards during extra turns, the next player continues from where
-                        they stopped
-                    </li>
-                    <li>
-                        During a chain of extra turns, any player can interrupt by slapping the pile if a slap
-                        opportunity occurs, claiming the pile.
-                    </li>
-
-
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Face Cards & Aces</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">Jack = 1 extra turn</li>
+                            <li class="list-group-item">Queen = 2 extra turns</li>
+                            <li class="list-group-item">King = 3 extra turns</li>
+                            <li class="list-group-item">Ace = 4 extra turns</li>
+                            <li class="list-group-item">If a player fails to play a face card or ace during extra turns, the last player who did play one collects the pile</li>
+                            <li class="list-group-item">Should a player deplete their cards during extra turns, the next player continues from where they stopped</li>
+                            <li class="list-group-item">During a chain of extra turns, any player can interrupt by slapping the pile if a slap opportunity occurs, claiming the pile</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,5 +79,10 @@
             </div>
         </div>
     </div>
+</body>
+<br>
+<br>
+<br>
+</html>
 
     {% endblock %}
