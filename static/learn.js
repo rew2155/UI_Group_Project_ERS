@@ -39,11 +39,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         $('#prev').text('< Prev');
     }
 
-    if (lesson_id < 6){
-        $('#exp').hide();
-    }
-    
-
     // Update the Next button's properties
     if (lesson_id === 5) {
         $('#next').text('Rules >').attr('href', '/setup/6');
