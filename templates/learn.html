@@ -18,16 +18,16 @@
         <div class="container mt-5">
             <div class="height-control row">
                 <div class="col-md-5">
-                    {% if lesson['id'] >= 6 %}
-                    <div class="explanation-header">Explanation</div>
-                    <div class="explanation-text"> {{ lesson['Subtitle1'] }}</div>
-                    <div class="example-header"> Example </div>
-                    <div class="example-text"> {{ lesson['Example'] }}</div>
-                    {% else %}
-                    <div class="explanation-header"></div>
-                    <br><br>
-                    <div class="setup_exps"> {{ lesson['Subtitle1'] }}</div>
-                    {% endif %}
+                    <div class="center-vertically">
+                        {% if lesson['id'] >= 6 %}
+                        <div class="explanation-header">Explanation</div>
+                        <div class="explanation-text"> {{ lesson['Subtitle1'] }}</div>
+                        <div class="example-header"> Example </div>
+                        <div class="example-text"> {{ lesson['Example'] }}</div>
+                        {% else %}
+                        <div class="setup_exps"> {{ lesson['Subtitle1'] }}</div>
+                        {% endif %}
+                    </div>
                 </div>
                 <div class="col-md-1 left-section"></div>
                 <div class="col-md-6 right-section">

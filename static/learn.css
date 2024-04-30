@@ -1,5 +1,6 @@
 .learn-container {
     margin-top: 3vw;
+    position: relative;
 }
 
 .height-control{
@@ -7,11 +8,17 @@
 }
 
 .setup_exps {
-    margin-top: 2.5vw;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2vw;
     letter-spacing: 0.05vw;
     margin-bottom: .5vw;
+}
+
+.center-vertically {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .learning-header {
