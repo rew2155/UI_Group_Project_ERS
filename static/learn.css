@@ -69,6 +69,10 @@
     margin-top: 5vw;
 }
 
+.category {
+    font-size: 1vw;
+}
+
 .btn {
     display: inline-block;
     background-color: #640000; /* Adjust color to match your button */

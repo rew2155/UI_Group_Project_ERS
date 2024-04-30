@@ -1,0 +1,124 @@
+
+.question-container {
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center align children horizontally */
+    justify-content: center;
+    /* Set the height of the container to full viewport height */
+    text-align: center;
+    /* Center the text within the container */
+}
+
+.quiz-question-number {
+
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 2.4vw;
+    font-weight: 800;
+    letter-spacing: 0.1vw;
+    margin-top: 3vw;
+}
+
+.prompt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    letter-spacing: 0.05vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    
+}
+
+.question {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    letter-spacing: 0.05vw;
+    margin-top: 1vw;
+}
+
+.answer-options {
+    margin-top: 2vw;
+}
+
+.btn {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: 10vw;
+    display: inline-block;
+    background-color: #ffffff; /* Adjust color to match your button */
+    color: black;
+    padding: .4vw 1.2vw; /* Adjust padding to change size, while keeping text centered */
+    font-size: .8vw; /* Adjust font size as needed */
+    border: none;
+    border-radius: 4px; /* Adjust for rounded corners */
+    line-height: 1; /* Default line height to ensure vertical centering */
+    vertical-align: middle; /* This aligns the text vertically */
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    border: solid black 1px;
+}
+
+.btn:hover {
+    background: darkgoldenrod;
+    color: white;
+}
+
+.nav-status-container {
+    margin-top: 3vw;
+}
+.category {
+    font-size: 1vw;
+}
+
+.situation_img {
+    max-width: 20vw;
+    max-height: 15vw;
+}
+
+.drag_card {
+    max-width: 5vw;
+    max-height: 10vw;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.selected {
+    background-color: goldenrod;
+    color: white;
+}
