@@ -395,6 +395,7 @@ lesson_ls = {
         "Title": "Face Cards and Slapping",
         "Subtitle1":"If an opportunity to slap arises within a chain of extra turns, players may interrupt the extra turns and slap and claim the pile.",
         "Picture":"https://lh3.googleusercontent.com/pw/AP1GczPU6MhZhT_FxmM_A-DYf5r9C5utBM05CWSK0s7vCss11D7NtfmXcS8fbw2L0zWE7Ux488VigD0EEnQSOcWqymZB281WIZktkC97fTpZiZZL3KjaPq0=w2400",
+        "Example":"One player plays a King, the next player plays a Jack, and the following player plays a King, forming a King-Jack-King sandwich.",
         "Category":"Rules",
         "Status":"17 of 18",
         "Time": None,
